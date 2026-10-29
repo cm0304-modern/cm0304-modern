@@ -71,3 +71,7 @@ If you enjoy this, you can buy us a coffee: <https://buymeacoffee.com/cm0304mode
 ## Disclaimer
 
 Fan-made and unofficial. Not affiliated with or endorsed by the original developers or publishers. No game files are included other than our installer patch and data. See [NOTICE.md](NOTICE.md).
+
+## License
+
+The documentation and text in this repository are licensed under [CC BY 4.0](LICENSE). The game, the installer's data and the football data are not covered; see [NOTICE.md](NOTICE.md).
