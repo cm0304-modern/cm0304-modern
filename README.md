@@ -18,7 +18,13 @@ Not everything is perfect. Please read the [known issues](docs/known-issues.md) 
 
 ## Screenshots
 
-Screenshots are coming. See [docs/screenshots.md](docs/screenshots.md).
+![English Premier Division table](docs/images/01-premier-league-table.jpg)
+
+![Haaland player profile](docs/images/08-haaland-profile.jpg)
+
+![Liverpool squad](docs/images/04-liverpool-squad.jpg)
+
+More in the [screenshots gallery](docs/screenshots.md).
 
 ## Requirements
 
