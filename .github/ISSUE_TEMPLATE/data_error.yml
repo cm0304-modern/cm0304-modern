@@ -1,0 +1,72 @@
+name: Data error
+description: A wrong or missing player, staff member, club, stadium, name, or competition.
+title: "[Data] "
+labels: ["data"]
+body:
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: Shown at the lower left of the game.
+      options:
+        - 25.0.0
+    validations:
+      required: true
+  - type: checkboxes
+    id: nations
+    attributes:
+      label: Nation(s) you ticked at game creation
+      options:
+        - label: England
+        - label: Spain
+        - label: Italy
+        - label: France
+        - label: Germany
+        - label: Scotland
+        - label: Holland
+        - label: Portugal
+        - label: Switzerland
+        - label: Turkey
+        - label: Czech Republic
+        - label: Sweden
+        - label: Wales
+        - label: Northern Ireland
+        - label: Argentina
+        - label: Brazil
+        - label: Norway
+        - label: Croatia
+        - label: Republic of Ireland
+        - label: Slovakia
+        - label: Austria
+        - label: Denmark
+        - label: Poland
+        - label: Hungary
+        - label: Greece
+        - label: Finland
+        - label: Ukraine
+        - label: Belgium
+        - label: Other / not sure
+  - type: input
+    id: game_date
+    attributes:
+      label: In-game date
+      description: For example 2026-03-14.
+      placeholder: YYYY-MM-DD
+  - type: input
+    id: subject
+    attributes:
+      label: Which player, club, or competition?
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong, and what should it be?
+      description: If you have a source (for example a club or league website), add it.
+    validations:
+      required: true
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments
+      description: Screenshots are welcome.

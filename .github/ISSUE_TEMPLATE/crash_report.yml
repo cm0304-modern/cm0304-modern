@@ -1,0 +1,75 @@
+name: Crash report
+description: The game closed, froze, or showed an error dialog.
+title: "[Crash] "
+labels: ["crash"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. A crash dump helps a lot: see https://cm0304-modern.github.io/cm0304-modern/report-a-bug
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: Shown at the lower left of the game.
+      options:
+        - 25.0.0
+    validations:
+      required: true
+  - type: checkboxes
+    id: nations
+    attributes:
+      label: Nation(s) you ticked at game creation
+      options:
+        - label: England
+        - label: Spain
+        - label: Italy
+        - label: France
+        - label: Germany
+        - label: Scotland
+        - label: Holland
+        - label: Portugal
+        - label: Switzerland
+        - label: Turkey
+        - label: Czech Republic
+        - label: Sweden
+        - label: Wales
+        - label: Northern Ireland
+        - label: Argentina
+        - label: Brazil
+        - label: Norway
+        - label: Croatia
+        - label: Republic of Ireland
+        - label: Slovakia
+        - label: Austria
+        - label: Denmark
+        - label: Poland
+        - label: Hungary
+        - label: Greece
+        - label: Finland
+        - label: Ukraine
+        - label: Belgium
+        - label: Other / not sure
+  - type: input
+    id: game_date
+    attributes:
+      label: In-game date
+      description: For example 2026-03-14.
+      placeholder: YYYY-MM-DD
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What were you doing when it crashed? Copy any error text.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to repeat it
+      description: If you know how to make it happen again.
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments
+      description: Drag a zipped minidump (.dmp) and screenshots here. If the zip is too large, say so and we will find another way.

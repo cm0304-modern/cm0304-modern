@@ -1,0 +1,31 @@
+# Known issues
+
+This is what we know is not right in 25.0.0. If you find something else, please [report it](report-a-bug.md).
+
+## Nations
+
+- **14 nations are not selectable:** Serbia and Montenegro, Australia, Japan, Russia, Mexico, Colombia, Indonesia, South Korea, Hong Kong, South Africa, India, China PR, Singapore and Israel. Their clubs exist as foreign clubs with current rosters, but their leagues were not updated.
+- Some Welsh and Northern Irish clubs have no counterpart in the source data.
+
+## Clubs and squads
+
+- **Generated squads.** Some clubs have no matching squad in the source data. Those clubs get a generated squad (made-up players) so they can play. Examples we know of are a few clubs in Austria, Finland and Belgium; there may be more.
+- **Missing managers.** Some clubs have no manager. Known examples include a few clubs in Belgium, Greece, Finland and Ukraine.
+- **Missing clubs.** A few real clubs could not be placed in a league and are left out of their country's league structure (for example three Polish clubs).
+- **Reserve and B teams** cannot be represented by the game's competition structure.
+- **Youth teams are empty.**
+- **Club and competition histories are still from 2003.** Trophy rooms and "previous winners" lists do not show real recent history.
+- **Player accuracy.** Players come from Football Manager 26 data. We do not claim that every player's details are correct, and squad numbers are not set.
+
+## Game engine limits
+
+- Some divisions keep their original size because the old game cannot handle another size without breaking its cups. Belgium, for example, keeps 18 clubs in each of its top two divisions.
+- Lower divisions in several nations cannot be inspected while the game runs, so their fixture dates were not checked as closely as the top divisions.
+- Second and later rollovers (more than two simulated seasons) have been tested for fewer nations than the first rollover.
+
+## Install and compatibility
+
+- Only a stock CM 03/04 4.1.5 installation is supported. Modified or already upgraded games are refused.
+- The installer is not code-signed, so Windows SmartScreen shows an "unknown publisher" warning.
+- Saves from other versions do not work. Start a new game.
+- Only Windows 10 and 11 are considered.

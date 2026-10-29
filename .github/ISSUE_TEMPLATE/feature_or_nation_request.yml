@@ -1,0 +1,32 @@
+name: Feature or nation request
+description: Suggest an improvement or ask about a nation.
+title: "[Request] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a fan project with limited time. Requests are welcome, but we cannot promise any of them. Nations are limited by what the old game engine can handle.
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: Shown at the lower left of the game.
+      options:
+        - 25.0.0
+    validations:
+      required: true
+  - type: input
+    id: nation
+    attributes:
+      label: Nation (if this is about a nation)
+  - type: textarea
+    id: request
+    attributes:
+      label: What would you like?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it useful?
