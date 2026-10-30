@@ -13,6 +13,7 @@ body:
       label: Version
       description: Shown at the lower left of the game.
       options:
+        - 25.0.1
         - 25.0.0
     validations:
       required: true

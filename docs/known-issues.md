@@ -1,6 +1,6 @@
 # Known issues
 
-This is what we know is not right in 25.0.0. If you find something else, please [report it](report-a-bug.md).
+This is what we know is not right in 25.0.1. If you find something else, please [report it](report-a-bug.md).
 
 ## Nations
 
@@ -25,7 +25,9 @@ This is what we know is not right in 25.0.0. If you find something else, please 
 
 ## Install and compatibility
 
-- Only a stock CM 03/04 4.1.5 installation is supported. Modified or already upgraded games are refused.
+- Only CM 03/04 updated to version 4.1.5 is supported. The installer replaces `cm0304.exe`, so exe-level mods and cracks you use are replaced (your own exe is backed up and restored by the uninstaller).
+- The installer cannot be tested against every game variant or language version. An unusual exe length or database header only gives a warning during install.
+- The commentary match view follows the same speed setting as the 2D view, so a fast setting also speeds up the commentary.
 - The installer is not code-signed, so Windows SmartScreen shows an "unknown publisher" warning.
-- Saves from other versions do not work. Start a new game.
+- Saves from the original game or other versions do not work (25.0.0 saves do). Start a new game.
 - Only Windows 10 and 11 are considered.

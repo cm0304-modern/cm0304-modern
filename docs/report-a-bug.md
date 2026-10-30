@@ -4,7 +4,7 @@ Please open an issue here: <https://github.com/cm0304-modern/cm0304-modern/issue
 
 ## What to include
 
-- The version (shown at the lower left of the game; this release is 25.0.0).
+- The version (shown at the lower left of the game; this release is 25.0.1).
 - Which nations you ticked when you created the game.
 - The in-game date when it happened.
 - What happened and what you expected.
@@ -35,4 +35,5 @@ A minidump can contain parts of the game's memory, file paths and your Windows u
 ## Other useful files
 
 - The installer log: `%TEMP%\CM0304-Modern-Setup.log` (for install problems).
+- For install problems: the exact message the installer showed, and whether your game folder is CM 03/04 updated to 4.1.5 (official patch or no-CD exe, and where it came from).
 - A screenshot of the error.

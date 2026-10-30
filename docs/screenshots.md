@@ -1,6 +1,6 @@
 # Screenshots
 
-Taken in version 25.0.0 at the start of a new game (13 July 2025). The manager name has been hidden.
+Taken in version 25.0.0 (the database is unchanged in 25.0.1) at the start of a new game (13 July 2025). The manager name has been hidden.
 
 ## League table
 
@@ -38,6 +38,6 @@ Harry Kane (FC Bayern), with international caps and goals.
 
 - [ ] New-game screen showing the selectable nations
 - [ ] A club info screen with stadium and finances
-- [ ] The Contributors screen
+- [ ] A Contributors screen
 - [ ] The installer's folder page and success page
 - [ ] A fixture list for a non-English nation (for example Belgium)
