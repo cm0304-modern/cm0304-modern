@@ -41,7 +41,7 @@ Our modified `cm0304.exe` replaces yours, so other exe mods and cracks are **not
 Saves from 25.0.0 and 25.0.1 keep working with 25.0.2. Saves from the original game or other versions are not compatible: start a new game after a fresh install.
 
 ## Is it safe? Can I go back?
-The installer backs up the files it replaces or removes (26 entries, your exe included) (your exe included) to `backup_pre_v25` in your game folder, verifies the result, and rolls back automatically if something fails. `Uninstall CM 03-04 25.0.2.exe` (or the setup with `/uninstall`) restores your originals, then removes the backup folder and itself. Reinstalling afterwards works. Saves and other files are not touched.
+The installer backs up the files it replaces or removes (26 entries, your exe included) (your exe included) to `backup_pre_v25` in your game folder, verifies the result, and rolls back automatically if something fails. `Uninstall CM 03-04 25.0.3.exe` (or the setup with `/uninstall`) restores your originals, then removes the backup folder and itself. Reinstalling afterwards works. Saves and other files are not touched.
 
 ## Why does Windows warn me about the installer?
 The installer is not code-signed, so SmartScreen may show an "unknown publisher" warning. You can compare the file's SHA-256 with the one on the release page.
@@ -66,3 +66,16 @@ Only Windows 10 and 11 have been considered. The installer is a Windows program.
 
 ## How can I report a crash?
 Follow [report a bug](report-a-bug.md). A small crash dump file helps a lot.
+
+
+### What does the speed-up change in my game folder?
+Three files: `msvcr71.dll` (replaced by the speed-up runtime; your own file is backed up first), `MSVCR71_real.dll` (your original runtime, kept under this name because the speed-up forwards to it) and `cm_proxy.cfg` (optional settings, explained inside). The uninstaller puts your own `msvcr71.dll` back byte for byte and removes the other two.
+
+### How do I switch the speed-up off?
+Open `cm_proxy.cfg` in the game folder and put the line `CM_PROXY_DISABLE=1` into it (remove the `#` in front of the example line), then restart the game: the caches are off and the game behaves as before. Or install with the `/noproxy` switch of a silent install, or run the uninstaller. By hand: delete `msvcr71.dll` and rename `MSVCR71_real.dll` to `msvcr71.dll`. Do not delete only `MSVCR71_real.dll`: the game then does not start and Windows reports that `MSVCR71_real.dll` was not found.
+
+### My antivirus reports msvcr71.dll
+The speed-up library is not code-signed. Add the game folder to your antivirus exclusions, or install with `/noproxy` (silent install), or switch the speed-up off as above.
+
+### What if my msvcr71.dll is not the original?
+If it is another valid 32-bit runtime exporting the same functions, the installer keeps your file as `MSVCR71_real.dll`. If it is not a usable runtime (or belongs to another tool), the installer leaves it alone, installs everything else without the speed-up and says so on the last page.

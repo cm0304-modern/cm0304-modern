@@ -1,6 +1,6 @@
 # Known issues
 
-This is what we know is not right in 25.0.2. If you find something else, please [report it](report-a-bug.md).
+This is what we know is not right in 25.0.3. If you find something else, please [report it](report-a-bug.md).
 
 ## Nations
 
@@ -32,3 +32,6 @@ This is what we know is not right in 25.0.2. If you find something else, please 
 - **Update helper.** The game exe starts a small helper, `CM0304-UpdateCheck.exe`, when the game starts (an unsigned program, so antivirus or SmartScreen may warn about it). It only checks for a newer version, see [the update notice](update-notice.md). You can switch it off, or simply delete it: the game works without it.
 - Saves from the original game or other versions do not work (25.0.x saves do). Start a new game.
 - Only Windows 10 and 11 are considered.
+
+- The speed-up settings are read from `cm_proxy.cfg` (environment variables do not reach the game, which runs with administrator rights).
+

@@ -1,5 +1,19 @@
 # Changelog
 
+## 25.0.3
+
+**Added**
+
+- Speed-up: the game runs faster through a type-cast cache and a history-file handle cache (about 1.4x in the transfer window in our tests). Both caches live in a small replacement of the game's own runtime library: `msvcr71.dll` in the game folder is replaced, your original runtime is kept next to it as `MSVCR71_real.dll`, and the optional settings are in `cm_proxy.cfg`.
+- You can switch the speed-up off at any time by putting the line `CM_PROXY_DISABLE=1` into `cm_proxy.cfg` (the game then behaves as before), or install without it with the `/noproxy` switch of a silent install. The uninstaller puts your own `msvcr71.dll` back byte for byte and removes the two other files.
+- If your `msvcr71.dll` is not the original runtime but another valid one, the installer keeps your file as `MSVCR71_real.dll`; if it is not a usable runtime, the installer leaves it alone and installs everything else without the speed-up (the last page says so).
+
+**Changed**
+
+- The version label is now 25.0.3.
+
+Database content is unchanged from 25.0.2, so existing 25.0.x saves keep working. The speed-up library is not code-signed: if your antivirus program reports it, add the game folder to its exclusions or install with `/noproxy`. Installer: `CM0304-Modern-25.0.3-Setup.exe`, 39,649,792 bytes, SHA-256 `BCC56B34CE982F4B8B3F430AC82BD25908AB559C609AA640C3C9AC04D9648B02`.
+
 ## 25.0.2
 
 **Added**

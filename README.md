@@ -4,7 +4,7 @@ A fan-made, unofficial update that brings **Championship Manager 03/04** (versio
 
 > **Unofficial.** This project is fan-made. It is not affiliated with, endorsed by, or connected to the original developers or publishers of Championship Manager. See [NOTICE.md](NOTICE.md).
 
-**Current version: 25.0.2** - download the installer from the [Releases page](../../releases/latest).
+**Current version: 25.0.3** - download the installer from the [Releases page](../../releases/latest).
 
 ## What you get
 
@@ -39,7 +39,7 @@ This project does **not** include the game. You need your own copy.
 
 ## Install (3 steps)
 
-1. Download `CM0304-Modern-25.0.2-Setup.exe` from the [latest release](../../releases/latest). (Optional: compare its SHA-256 with the one on the release page.)
+1. Download `CM0304-Modern-25.0.3-Setup.exe` from the [latest release](../../releases/latest). (Optional: compare its SHA-256 with the one on the release page.)
 2. Run it. It asks for administrator rights because the default game folder is under Program Files. Windows may show an "unknown publisher" (SmartScreen) warning, because the installer is not code-signed.
 3. Pick your game folder (the folder that contains `cm0304.exe`; common locations are detected). Setup checks the folder, backs up the original files, installs, and verifies every file.
 
@@ -52,14 +52,14 @@ Then **start a new game**. Saves made with the original game or other versions a
 Silent install for advanced users:
 
 ```
-CM0304-Modern-25.0.2-Setup.exe /S /D=C:\Program Files (x86)\Eidos\CM 03-04
+CM0304-Modern-25.0.3-Setup.exe /S /D=C:\Program Files (x86)\Eidos\CM 03-04
 ```
 
 Add `/noupdatecheck` to leave the update notice off (see [the update notice](docs/update-notice.md)). (`/D=` must be the last parameter. Exit code 0 means success. The log is `%TEMP%\CM0304-Modern-Setup.log`.)
 
 ## Uninstall
 
-The installer copies the original files to `backup_pre_v25` inside your game folder. To go back, run `Uninstall CM 03-04 25.0.2.exe` from the game folder (or run the setup again with `/uninstall`). It verifies the backup, restores your files from before the update (your own exe included) byte for byte, and then removes the backup folder and the uninstaller itself. Your saves and other files are not touched. If an old backup exists from an earlier install, the installer archives it as `backup_pre_v25_old_<timestamp>` instead of blocking.
+The installer copies the original files to `backup_pre_v25` inside your game folder. To go back, run `Uninstall CM 03-04 25.0.3.exe` from the game folder (or run the setup again with `/uninstall`). It verifies the backup, restores your files from before the update (your own exe included) byte for byte, and then removes the backup folder and the uninstaller itself. Your saves and other files are not touched. If an old backup exists from an earlier install, the installer archives it as `backup_pre_v25_old_<timestamp>` instead of blocking.
 
 ## What the installer changes
 

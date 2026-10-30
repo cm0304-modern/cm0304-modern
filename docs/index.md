@@ -2,7 +2,7 @@
 
 A fan-made, unofficial update that brings Championship Manager 03/04 (version 4.1.5) into the 2025/26 football world.
 
-**Current version: 25.0.2** - [Download from Releases](https://github.com/cm0304-modern/cm0304-modern/releases/latest)
+**Current version: 25.0.3** - [Download from Releases](https://github.com/cm0304-modern/cm0304-modern/releases/latest)
 
 Pages: [FAQ](faq.md) | [Nations](nations.md) | [Known issues](known-issues.md) | [Update notice](update-notice.md) | [Changelog](changelog.md) | [Report a bug](report-a-bug.md) | [Screenshots](screenshots.md)
 
@@ -16,7 +16,7 @@ Pages: [FAQ](faq.md) | [Nations](nations.md) | [Known issues](known-issues.md) |
 
 **Steps**
 
-1. Download `CM0304-Modern-25.0.2-Setup.exe` from the release page. You can check the download with PowerShell: `Get-FileHash .\CM0304-Modern-25.0.2-Setup.exe` and compare with the SHA-256 shown on the release.
+1. Download `CM0304-Modern-25.0.3-Setup.exe` from the release page. You can check the download with PowerShell: `Get-FileHash .\CM0304-Modern-25.0.3-Setup.exe` and compare with the SHA-256 shown on the release.
 2. Run the installer and accept the administrator prompt. If Windows SmartScreen says "unknown publisher", that is because the installer is not code-signed.
 3. Choose the folder that contains `cm0304.exe`. Setup lists what it will change, backs up the originals to `backup_pre_v25`, installs and verifies every file.
 4. Start the game and begin a **new game**. Saves from the original game or other versions do not work with this version.
@@ -27,9 +27,14 @@ Pages: [FAQ](faq.md) | [Nations](nations.md) | [Known issues](known-issues.md) |
 
 If the installer refuses, it has not changed anything. It refuses only when the folder is clearly not a CM 03/04 folder, the game is running or files are not writable.
 
-**Uninstall:** run `Uninstall CM 03-04 25.0.2.exe` from your game folder. It restores your original files (your own exe included) from the backup and then removes the backup folder and itself.
+**Uninstall:** run `Uninstall CM 03-04 25.0.3.exe` from your game folder. It restores your original files (your own exe included) from the backup and then removes the backup folder and itself.
 
-## What's new in 25.0.2
+## What's new in 25.0.3
+
+- **The game runs faster.** A type-cast cache and a history-file handle cache sit in a small replacement of the game's own runtime library. In our tests this made the transfer window about 1.4 times faster. The game data is unchanged, so your 25.0.x saves keep working.
+- The installer now also puts three small files in your game folder: `msvcr71.dll` (the speed-up, your own file is backed up first), `MSVCR71_real.dll` (your original runtime, kept because the speed-up forwards to it) and `cm_proxy.cfg` (optional settings). The uninstaller puts your own file back. See the [FAQ](faq.md) for how to switch the speed-up off.
+
+## What came with 25.0.2
 
 - **A friendly "new version" notice.** When you start the game, a small helper looks at this project's releases page, at most once a day. If a newer version is out, a short window tells you and asks whether you want to open the download page. Nothing is downloaded or changed for you, and nothing about you or your game is sent.
 - **You are in control.** The installer has a box "Check for updates when the game starts". Untick it and the notice never appears. You can also switch it off later. Details: [the update notice](update-notice.md).
