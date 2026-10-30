@@ -1,5 +1,18 @@
 # Changelog
 
+## 25.0.2
+
+**Added**
+
+- Update notice: when you start the game, a small helper checks the project's GitHub releases page at most once a day. If a newer version exists, a short dialog tells you and offers to open the download page. It sends no data about you or your game, and it never changes anything by itself.
+- You can turn the update notice off in the installer ("Check for updates when the game starts"), with the `/noupdatecheck` switch of a silent install, or later by creating an empty file named `update-check.disabled` in the game folder (or by setting the environment variable `CM0304_NO_UPDATE_CHECK=1`).
+
+**Changed**
+
+- The version label is now 25.0.2.
+
+Database content is unchanged from 25.0.1, so existing 25.0.x saves keep working. The uninstaller removes the update helper and its settings folder along with everything else. Installer: `CM0304-Modern-25.0.2-Setup.exe`, 39,419,904 bytes, SHA-256 `27EE32E75508B13D7DE15258600B3F0316AD2410F3ADFC6D1EED87F052E42E42`.
+
 ## 25.0.1
 
 **Fixed**

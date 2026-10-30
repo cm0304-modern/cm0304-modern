@@ -14,5 +14,5 @@ That license does **not** cover:
 
 ## Other terms
 
-- The installer contains a **modified game executable** and data files, for use with a copy of the game you already own. No other game files are included. The installer replaces your `cm0304.exe` with the modified one (your own is backed up and restored by the uninstaller). The modified executable no longer asks for the game CD.
+- The installer contains a **modified game executable** and data files, for use with a copy of the game you already own. No other game files are included. The installer replaces your `cm0304.exe` with the modified one (your own is backed up and restored by the uninstaller). The modified executable no longer asks for the game CD. It also starts a small helper program, `CM0304-UpdateCheck.exe`, at game start to look for a newer version of this project (see [the update notice](docs/update-notice.md)). The helper is not code-signed, so antivirus software or SmartScreen may warn about it; it can be disabled or deleted and the game works without it.
 - Everything is provided as-is, without warranty of any kind. Use the update at your own risk; the installer makes a backup and can be uninstalled.

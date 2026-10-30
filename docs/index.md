@@ -2,9 +2,9 @@
 
 A fan-made, unofficial update that brings Championship Manager 03/04 (version 4.1.5) into the 2025/26 football world.
 
-**Current version: 25.0.1** - [Download from Releases](https://github.com/cm0304-modern/cm0304-modern/releases/latest)
+**Current version: 25.0.2** - [Download from Releases](https://github.com/cm0304-modern/cm0304-modern/releases/latest)
 
-Pages: [FAQ](faq.md) | [Nations](nations.md) | [Known issues](known-issues.md) | [Changelog](changelog.md) | [Report a bug](report-a-bug.md) | [Screenshots](screenshots.md)
+Pages: [FAQ](faq.md) | [Nations](nations.md) | [Known issues](known-issues.md) | [Update notice](update-notice.md) | [Changelog](changelog.md) | [Report a bug](report-a-bug.md) | [Screenshots](screenshots.md)
 
 ## Install guide
 
@@ -16,20 +16,27 @@ Pages: [FAQ](faq.md) | [Nations](nations.md) | [Known issues](known-issues.md) |
 
 **Steps**
 
-1. Download `CM0304-Modern-25.0.1-Setup.exe` from the release page. You can check the download with PowerShell: `Get-FileHash .\CM0304-Modern-25.0.1-Setup.exe` and compare with the SHA-256 shown on the release.
+1. Download `CM0304-Modern-25.0.2-Setup.exe` from the release page. You can check the download with PowerShell: `Get-FileHash .\CM0304-Modern-25.0.2-Setup.exe` and compare with the SHA-256 shown on the release.
 2. Run the installer and accept the administrator prompt. If Windows SmartScreen says "unknown publisher", that is because the installer is not code-signed.
 3. Choose the folder that contains `cm0304.exe`. Setup lists what it will change, backs up the originals to `backup_pre_v25`, installs and verifies every file.
 4. Start the game and begin a **new game**. Saves from the original game or other versions do not work with this version.
 
 **The installer replaces `cm0304.exe`** with our modified executable (it carries the rule changes). Your own exe is backed up byte for byte. No CD is needed afterwards.
 
-**Upgrading from 25.0.0, or reinstalling:** just run the new installer on the same game folder. Your 25.0.0 saves keep working (the database is unchanged).
+**Upgrading from 25.0.0 or 25.0.1, or reinstalling:** just run the new installer on the same game folder. Your 25.0.x saves keep working (the database is unchanged).
 
 If the installer refuses, it has not changed anything. It refuses only when the folder is clearly not a CM 03/04 folder, the game is running or files are not writable.
 
-**Uninstall:** run `Uninstall CM 03-04 25.0.1.exe` from your game folder. It restores your original files (your own exe included) from the backup and then removes the backup folder and itself.
+**Uninstall:** run `Uninstall CM 03-04 25.0.2.exe` from your game folder. It restores your original files (your own exe included) from the backup and then removes the backup folder and itself.
 
-## What's new in 25.0.1
+## What's new in 25.0.2
+
+- **A friendly "new version" notice.** When you start the game, a small helper looks at this project's releases page, at most once a day. If a newer version is out, a short window tells you and asks whether you want to open the download page. Nothing is downloaded or changed for you, and nothing about you or your game is sent.
+- **You are in control.** The installer has a box "Check for updates when the game starts". Untick it and the notice never appears. You can also switch it off later. Details: [the update notice](update-notice.md).
+- The game data is the same as in 25.0.1, so your 25.0.x saves keep working.
+- Note: the installer now also puts a small program, `CM0304-UpdateCheck.exe`, in your game folder. It is not code-signed, so antivirus or Windows may mention it. It is safe to delete (see [known issues](known-issues.md)).
+
+## What came with 25.0.1
 
 - Friendly matches allow 12 substitutions again (25.0.0 limited them to 5 by mistake).
 - The 2D match speed option now really controls the pace.
