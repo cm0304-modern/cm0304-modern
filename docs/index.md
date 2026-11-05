@@ -2,7 +2,7 @@
 
 A fan-made, unofficial update that brings Championship Manager 03/04 (version 4.1.5) into the 2025/26 football world.
 
-**Current version: 25.0.3** - [Download from Releases](https://github.com/cm0304-modern/cm0304-modern/releases/latest)
+**Current version: 25.1.0** - [Download from Releases](https://github.com/cm0304-modern/cm0304-modern/releases/latest)
 
 Pages: [FAQ](faq.md) | [Nations](nations.md) | [Known issues](known-issues.md) | [Update notice](update-notice.md) | [Changelog](changelog.md) | [Report a bug](report-a-bug.md) | [Screenshots](screenshots.md)
 
@@ -16,20 +16,33 @@ Pages: [FAQ](faq.md) | [Nations](nations.md) | [Known issues](known-issues.md) |
 
 **Steps**
 
-1. Download `CM0304-Modern-25.0.3-Setup.exe` from the release page. You can check the download with PowerShell: `Get-FileHash .\CM0304-Modern-25.0.3-Setup.exe` and compare with the SHA-256 shown on the release.
+1. Download `CM0304-Modern-25.1.0-Setup.exe` from the release page. You can check the download with PowerShell: `Get-FileHash .\CM0304-Modern-25.1.0-Setup.exe` and compare with the SHA-256 shown on the release.
 2. Run the installer and accept the administrator prompt. If Windows SmartScreen says "unknown publisher", that is because the installer is not code-signed.
 3. Choose the folder that contains `cm0304.exe`. Setup lists what it will change, backs up the originals to `backup_pre_v25`, installs and verifies every file.
 4. Start the game and begin a **new game**. Saves from the original game or other versions do not work with this version.
 
 **The installer replaces `cm0304.exe`** with our modified executable (it carries the rule changes). Your own exe is backed up byte for byte. No CD is needed afterwards.
 
-**Upgrading from 25.0.0 or 25.0.1, or reinstalling:** just run the new installer on the same game folder. Your 25.0.x saves keep working (the database is unchanged).
+**Upgrading from 25.0.0-25.0.3, or reinstalling:** run the new installer on the same game folder (two new data files are added: `data\db\club_coef.dat` and `data\db\ccs_extra.dat`). **Start a NEW game afterwards: saves made with 25.0.x do not load in 25.1.0** (keep them and use the uninstaller if you want to go back). A save made by 25.1.0 loads only in 25.1.0.
 
 If the installer refuses, it has not changed anything. It refuses only when the folder is clearly not a CM 03/04 folder, the game is running or files are not writable.
 
-**Uninstall:** run `Uninstall CM 03-04 25.0.3.exe` from your game folder. It restores your original files (your own exe included) from the backup and then removes the backup folder and itself.
+**Uninstall:** run `Uninstall CM 03-04 25.1.0.exe` from your game folder. It restores your original files (your own exe included) from the backup and then removes the backup folder and itself.
 
-## What's new in 25.0.3
+## What's new in 25.1.0
+
+**The three European competitions now follow the modern UEFA formats.** Start a NEW game: saves from 25.0.x do not load in 25.1.0.
+
+- **Champions League, Europa League and Conference League** each play a 36-club league phase (Swiss-system draw with pots; 8, 8 and 6 matchdays) with the real tie-break order. The best 8 go straight to the round of 16, places 9 to 24 play a knockout play-off round, then quarter-finals, semi-finals and the final. No away-goals rule. The Super Cup is played between the Champions League and Europa League winners.
+- **Qualifying paths.** Each competition has a main path and a champions path, and clubs that lose in qualifying drop into the next competition's qualifying or league phase, like in the real game. The rounds are listed one column per round on the competition screens, with the path named (Champions Path / League Path / Main Path); the draw message arrives once per draw and "View draw" opens that round.
+- **Who gets in is calculated from the real world.** A new game starts from the real 2024/25 season end (league positions and domestic cup winners decide the 2025/26 places). At every season rollover the number of clubs each association sends to each round is worked out from the association coefficients (the five seasons before the closing one), with the European Performance Spots and the title-holder rules. Associations without a selectable league do not send clubs.
+- **UEFA coefficients.** Real association coefficients 2020/21 to 2024/25 and the 2024+ points rule; the UEFA Coefficients screen shows the new values. A new screen, **UEFA Club Coefficients** (Competitions > Europe), lists the top 200 clubs over the last five seasons with the total.
+- **European prize money** follows the 2026/27 UEFA distribution (scaled by 0.75): participation fees, win and draw bonuses, league-phase ranking, knockout rounds and the Super Cup, paid through your club's normal finances.
+- **History and looks.** European competition histories from 2004 to 2025 (the Conference League from 2022), the new competition and round names, a picture for each competition in the title bar of its screen, and fixed header colours (dark blue, orange, green) instead of the last winner's colours.
+- **Squad registration** for the European qualifying rounds works from the first round: the first deadline is before the first qualifying round, and a game that starts after it asks for your squad list on the first day.
+
+Known gaps: the value pillar of the UEFA distribution is not modelled, some provisional marks in the league-phase tables appear only for clinched positions, and a few tie-break details are simplified. See [known issues](known-issues.md).
+## What came with 25.0.3
 
 - **The game runs faster.** A type-cast cache and a history-file handle cache sit in a small replacement of the game's own runtime library. In our tests this made the transfer window about 1.4 times faster. The game data is unchanged, so your 25.0.x saves keep working.
 - The installer now also puts three small files in your game folder: `msvcr71.dll` (the speed-up, your own file is backed up first), `MSVCR71_real.dll` (your original runtime, kept because the speed-up forwards to it) and `cm_proxy.cfg` (optional settings). The uninstaller puts your own file back. See the [FAQ](faq.md) for how to switch the speed-up off.

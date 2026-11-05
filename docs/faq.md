@@ -41,7 +41,7 @@ Our modified `cm0304.exe` replaces yours, so other exe mods and cracks are **not
 Saves from 25.0.0 and 25.0.1 keep working with 25.0.2. Saves from the original game or other versions are not compatible: start a new game after a fresh install.
 
 ## Is it safe? Can I go back?
-The installer backs up the files it replaces or removes (26 entries, your exe included) (your exe included) to `backup_pre_v25` in your game folder, verifies the result, and rolls back automatically if something fails. `Uninstall CM 03-04 25.0.3.exe` (or the setup with `/uninstall`) restores your originals, then removes the backup folder and itself. Reinstalling afterwards works. Saves and other files are not touched.
+The installer backs up the files it replaces or removes (26 entries, your exe included) (your exe included) to `backup_pre_v25` in your game folder, verifies the result, and rolls back automatically if something fails. `Uninstall CM 03-04 25.1.0.exe` (or the setup with `/uninstall`) restores your originals, then removes the backup folder and itself. Reinstalling afterwards works. Saves and other files are not touched.
 
 ## Why does Windows warn me about the installer?
 The installer is not code-signed, so SmartScreen may show an "unknown publisher" warning. You can compare the file's SHA-256 with the one on the release page.

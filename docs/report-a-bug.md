@@ -4,7 +4,7 @@ Please open an issue here: <https://github.com/cm0304-modern/cm0304-modern/issue
 
 ## What to include
 
-- The version (shown at the lower left of the game; this release is 25.0.3).
+- The version (shown at the lower left of the game; this release is 25.1.0).
 - Which nations you ticked when you created the game.
 - The in-game date when it happened.
 - What happened and what you expected.

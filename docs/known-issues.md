@@ -1,6 +1,6 @@
 # Known issues
 
-This is what we know is not right in 25.0.3. If you find something else, please [report it](report-a-bug.md).
+This is what we know is not right in 25.1.0. If you find something else, please [report it](report-a-bug.md).
 
 ## Nations
 
@@ -23,6 +23,15 @@ This is what we know is not right in 25.0.3. If you find something else, please 
 - Lower divisions in several nations cannot be inspected while the game runs, so their fixture dates were not checked as closely as the top divisions.
 - Second and later rollovers (more than two simulated seasons) have been tested for fewer nations than the first rollover.
 
+## European competitions
+
+- Start a **new game**: saves from 25.0.x do not load in 25.1.0.
+- The value pillar of the UEFA prize distribution is not modelled, so European income is lower than the real figures (the amounts are also scaled by 0.75).
+- In the league-phase tables the Q (round of 16) and PI (play-off) marks appear only when a place is clinched, not provisionally after every matchday.
+- A few tie-break details of the league phase are simplified (the disciplinary-points rule is not used).
+- The Round drop-down on a competition screen can list a round that has not been drawn yet when a later round of the other path is already drawn.
+- The competition pictures are simple 60x60 files; you can replace them with your own files of the same names in `data\graphics\pictures\competitions` (restart the game afterwards).
+- Nations that are hidden in the new-game screen, Israel, Russia, Serbia and Montenegro, Liechtenstein and Kosovo do not send clubs to the European competitions.
 ## Install and compatibility
 
 - Only CM 03/04 updated to version 4.1.5 is supported. The installer replaces `cm0304.exe`, so exe-level mods and cracks you use are replaced (your own exe is backed up and restored by the uninstaller).
