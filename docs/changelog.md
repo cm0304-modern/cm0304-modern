@@ -1,5 +1,21 @@
 # Changelog
 
+## 25.1.1
+
+**Fixed**
+
+- The prize money of the league phase of the Champions League, Europa League and Conference League was paid several times per match when the League Table tab of the live match screen was open: every refresh of that tab paid every club of the night again, and your inbox filled with the same message ('given $2,500,000' ten times for one match). It is now paid once per match, when the match is decided. The amounts are unchanged. Matches you do not watch, or watch with that tab closed, were always paid correctly.
+- The Slovak divisions play exactly the number of matches they declare. The calendars of the First Division (12 clubs, 33 matches each) and the Second Division (14 clubs, 26 matches each) had 36 and 30 dates; they now have 33 and 26 matchdays. In an existing save the current season keeps its old calendar and the next season is created with the right one.
+- A rare crash of the Serie C Cup knock-out stage on 10-11 September of a NEW game with Italy (about 1 in 200 new games with Italy) is fixed. A save whose Serie C Cup was already built too short cannot be repaired.
+- The Argentine second division (Primera Nacional, 36 clubs) now completes its second half-season (35 matchdays instead of 21), so the Argentine leagues finish their season and move on to the next one; the Argentine second division stays at 36 clubs and the Premier Division at 30.
+
+**Changed**
+
+- The update notice only offers newer versions of the version line you have installed (25.x offers 25.x). A different major version (26.x) is a separate game and is never offered by it. The helper is now version 1.1.0.
+- The version label is now 25.1.1.
+
+**25.1.1 is a bug-fix update of 25.1.0.** The database files are identical to 25.1.0; only `cm0304.exe` and the update helper change. **Saves made with 25.1.0 load in 25.1.1** (no new game needed). Money that a save has already received through the prize-money bug stays in that save: it cannot be repaired. Until you update 25.1.0: do not open the League Table tab of the match screen during a live European league-phase match. **Argentina is fixed for new games only.** The calendar of a season is stored in the save: a save made with an earlier version keeps its old Argentine second-division calendar, in that save the division still cannot complete its season and the Argentine leagues stay stuck. Start a new game for the corrected structure. Installer: `CM0304-Modern-25.1.1-Setup.exe`, 39,704,064 bytes, SHA-256 `88163018132BC3F674CD504A83D8DA4F0FB6648C6AC3B89CEA9CC6F22133AB3D`.
+
 ## 25.1.0
 
 **Added**

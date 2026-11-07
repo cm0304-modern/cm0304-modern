@@ -9,11 +9,23 @@ Yes. The installer works with any exe in a CM 03/04 4.1.5 folder, no-CD exes inc
 ## I have the official 4.1.5 exe (installed with the official 4.1.4 and 4.1.5 patches)
 That works in 25.0.1. The 25.0.0 installer accepted only one specific 4.1.5 executable and refused the official one; this is fixed.
 
-## How do I upgrade from 25.0.0 or 25.0.1?
-Close the game and run the 25.0.2 installer on the same game folder (the same applies to a reinstall). The database is unchanged, so your 25.0.x saves keep working.
+## How do I upgrade from an earlier version?
+Close the game and run the installer on the same game folder (the same applies to a reinstall). From **25.1.0** to 25.1.1 only `cm0304.exe` and the update helper change; the database is identical, so your **25.1.0 saves keep working**. From **25.0.x** run the installer and then start a **new game**: saves made with 25.0.x or earlier do not load in 25.1.x.
+
+## In 25.1.0 I got the same prize-money message many times for one match. Is that fixed?
+Yes, in 25.1.1. In 25.1.0 the league-phase prize money of the Champions League, Europa League and Conference League was paid again every time the League Table tab of the live match screen refreshed, so one match could fill the inbox with the same "given $2,500,000" message and pay every club of the night many times over. Since 25.1.1 it is paid once per match, when the match is decided (the amounts are unchanged). Money that a save already received stays in that save; it cannot be repaired. If you stay on 25.1.0 for now, do not open the League Table tab during a live European league-phase match (matches you do not watch, or watch with that tab closed, were always paid correctly).
+
+## The Argentine second division never finishes its first season. Is that fixed?
+Yes, in 25.1.1 for **new games**. In 25.1.0 the Argentine second division (Primera Nacional, 36 clubs) had only 21 of the 35 matchdays it needs in its second half-season, so it could not complete its first season and the Argentine leagues did not move on to the next one. 25.1.1 gives it all 35 matchdays; the Argentine leagues now finish their season and roll over, the Argentine second division stays at 36 clubs and the Premier Division at 30. The calendar of a season is stored in the save, so a save made with an earlier version keeps its old Argentine second-division calendar and the Argentine leagues stay stuck in it: start a new game. (The Slovak divisions had a similar calendar problem, 36 and 30 dates for 33 and 26 matches per club, which 25.1.1 also fixes: a new game has 33 and 26 matchdays, an existing save gets the right calendar at its next season.)
+
+## The game crashed on 10 or 11 September in a new game with Italy. Is that fixed?
+25.1.1 fixes the cause for new games. In about 1 in 200 new games with Italy (25.1.0) the Serie C Cup knock-out stage was built one team short and the game crashed when it drew the first round on 10-11 September. A save whose Serie C Cup was already built too short cannot be repaired by the update.
+
+## Which version do I need: 25.x or 26.x?
+25.x is the 2025/26 game and keeps receiving bug fixes. A 26.x line (the 2026/27 game) is planned as a separate game: it will need a new game, and saves do not load across the two lines. The update notice only tells you about newer versions of your own line. See [which version do I need](index.md#which-version-do-i-need-two-lines).
 
 ## The game opened a window about a new version: is that safe?
-Yes. Since 25.0.2 a small helper (`CM0304-UpdateCheck.exe`) starts with the game and, at most once a day, asks this project's GitHub releases page whether a newer version exists. If so, it shows a window and offers to open the download page. It sends nothing about you or your game, and it never downloads or installs anything by itself. Details: [the update notice](update-notice.md).
+Yes. Since 25.0.2 a small helper (`CM0304-UpdateCheck.exe`) starts with the game and, at most once a day, asks this project's GitHub releases page whether a newer version of **your own version line** exists (25.x players are told about 25.x versions only). If so, it shows a window and offers to open the download page. It sends nothing about you or your game, and it never downloads or installs anything by itself. Details: [the update notice](update-notice.md).
 
 ## How do I turn off the update notice?
 Untick "Check for updates when the game starts" in the installer, or install silently with `/noupdatecheck`. Later you can create an empty file named `update-check.disabled` in the game folder, or set the environment variable `CM0304_NO_UPDATE_CHECK=1`. Full list: [the update notice](update-notice.md).
@@ -38,10 +50,10 @@ The other match views use the same setting; their pace can differ from 25.0.0.
 Our modified `cm0304.exe` replaces yours, so other exe mods and cracks are **not** kept while this update is installed. Database mods are replaced too. Everything is backed up, and the uninstaller restores your files from before the update.
 
 ## Can I keep my old saves?
-Saves from 25.0.0 and 25.0.1 keep working with 25.0.2. Saves from the original game or other versions are not compatible: start a new game after a fresh install.
+Saves made with 25.1.0 load in 25.1.1. Saves from 25.0.x and earlier, and from the original game, are not compatible with 25.1.x: start a new game after the update.
 
 ## Is it safe? Can I go back?
-The installer backs up the files it replaces or removes (26 entries, your exe included) (your exe included) to `backup_pre_v25` in your game folder, verifies the result, and rolls back automatically if something fails. `Uninstall CM 03-04 25.1.0.exe` (or the setup with `/uninstall`) restores your originals, then removes the backup folder and itself. Reinstalling afterwards works. Saves and other files are not touched.
+The installer backs up the files it replaces or removes (your exe included) to `backup_pre_v25` in your game folder, verifies the result, and rolls back automatically if something fails. `Uninstall CM 03-04 25.1.1.exe` (or the setup with `/uninstall`) restores your originals, then removes the backup folder and itself. Reinstalling afterwards works. Saves and other files are not touched. To go from 25.1.1 back to 25.1.0 (not to the original game), run the 25.1.0 installer from the [Releases page](https://github.com/cm0304-modern/cm0304-modern/releases) on the same game folder: it puts the 25.1.0 exe and helper back and leaves the data as it is.
 
 ## Why does Windows warn me about the installer?
 The installer is not code-signed, so SmartScreen may show an "unknown publisher" warning. You can compare the file's SHA-256 with the one on the release page.

@@ -4,7 +4,11 @@ Since version 25.0.2 the game can tell you when a newer version of CM 03/04 Mode
 
 ## What it is
 
-When the game starts, it also starts a small helper program, `CM0304-UpdateCheck.exe`, which sits in your game folder next to `cm0304.exe`. The helper compares the version you have with the latest version on this project's GitHub releases page. If a newer one exists, it shows a short window.
+When the game starts, it also starts a small helper program, `CM0304-UpdateCheck.exe`, which sits in your game folder next to `cm0304.exe`. The helper compares the version you have with the newest version **of your own version line** on this project's GitHub releases page. If a newer one exists, it shows a short window.
+
+## Which versions it offers
+
+Only versions of your own line: a 25.x game is told about newer 25.x versions, a 26.x game about newer 26.x versions. A version of the other line is never offered and never mentioned, because the two lines are different games (see [which version do I need](index.md#which-version-do-i-need-two-lines)). This rule is part of helper version 1.1.0, which comes with 25.1.1; the helper of 25.0.2 to 25.1.0 simply asked for the project's "latest release", and this project keeps that on the newest 25.x release for as long as 25.x is supported.
 
 ## Exactly what it does
 

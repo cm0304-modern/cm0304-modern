@@ -1,6 +1,6 @@
 # Known issues
 
-This is what we know is not right in 25.1.0. If you find something else, please [report it](report-a-bug.md).
+This is what we know is not right in 25.1.1. If you find something else, please [report it](report-a-bug.md).
 
 ## Nations
 
@@ -22,10 +22,12 @@ This is what we know is not right in 25.1.0. If you find something else, please 
 - Some divisions keep their original size because the old game cannot handle another size without breaking its cups. Belgium, for example, keeps 18 clubs in each of its top two divisions.
 - Lower divisions in several nations cannot be inspected while the game runs, so their fixture dates were not checked as closely as the top divisions.
 - Second and later rollovers (more than two simulated seasons) have been tested for fewer nations than the first rollover.
+- **Fixed in 25.1.1:** the Argentine second division (Primera Nacional, 36 clubs) now has all 35 matchdays in its second half-season (it had 21), so the Argentine leagues finish their season and move on; this holds for NEW games only: a save made with an earlier version keeps its old Argentine second-division calendar and the Argentine leagues stay stuck in it. The Slovak First and Second Division calendars had 36 and 30 dates for 33 and 26 matches per club; new games have 33 and 26 matchdays, an existing save gets the right calendar at its next season. A rare crash of the Serie C Cup knock-out stage on 10-11 September of a new game with Italy (about 1 in 200 new games with Italy) is fixed; a save whose Serie C Cup was already built too short cannot be repaired.
 
 ## European competitions
 
-- Start a **new game**: saves from 25.0.x do not load in 25.1.0.
+- Start a **new game**: saves from 25.0.x do not load in 25.1.x (saves of 25.1.0 load in 25.1.1).
+- **Fixed in 25.1.1:** in 25.1.0 the league-phase prize money was paid several times per match when the League Table tab of the live match screen was open. Money that a save already received through this bug stays in that save (it cannot be repaired). If you are still on 25.1.0, do not open that tab during a live European league-phase match.
 - The value pillar of the UEFA prize distribution is not modelled, so European income is lower than the real figures (the amounts are also scaled by 0.75).
 - In the league-phase tables the Q (round of 16) and PI (play-off) marks appear only when a place is clinched, not provisionally after every matchday.
 - A few tie-break details of the league phase are simplified (the disciplinary-points rule is not used).
@@ -39,7 +41,7 @@ This is what we know is not right in 25.1.0. If you find something else, please 
 - The commentary match view follows the same speed setting as the 2D view, so a fast setting also speeds up the commentary.
 - The installer is not code-signed, so Windows SmartScreen shows an "unknown publisher" warning.
 - **Update helper.** The game exe starts a small helper, `CM0304-UpdateCheck.exe`, when the game starts (an unsigned program, so antivirus or SmartScreen may warn about it). It only checks for a newer version, see [the update notice](update-notice.md). You can switch it off, or simply delete it: the game works without it.
-- Saves from the original game or other versions do not work (25.0.x saves do). Start a new game.
+- Saves from the original game and from versions before 25.1.0 do not work (25.1.0 saves do). Start a new game.
 - Only Windows 10 and 11 are considered.
 
 - The speed-up settings are read from `cm_proxy.cfg` (environment variables do not reach the game, which runs with administrator rights).
