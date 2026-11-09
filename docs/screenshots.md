@@ -34,6 +34,12 @@ Paris Saint-Germain in the French First League.
 
 Harry Kane (FC Bayern), with international caps and goals.
 
+## Player profile: Positions pitch (25.1.2)
+
+![Mauro Icardi's profile with the Positions pitch](images/12-icardi-profile-positions.jpg)
+
+The Positions box of the player profile (25.1.2, taken in a game in November 2025; the manager name is hidden): Mauro Icardi is natural at striker (green), accomplished at attacking midfield (light green) and unconvincing in midfield (orange).
+
 ## Still to come
 
 - [ ] New-game screen showing the selectable nations

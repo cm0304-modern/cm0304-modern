@@ -1,6 +1,6 @@
 # Known issues
 
-This is what we know is not right in 25.1.1. If you find something else, please [report it](report-a-bug.md).
+This is what we know is not right in 25.1.2. If you find something else, please [report it](report-a-bug.md).
 
 ## Nations
 

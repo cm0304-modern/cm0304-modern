@@ -1,5 +1,17 @@
 # Changelog
 
+## 25.1.2
+
+**Added**
+
+- Player profile: a Positions pitch shows where a player can play, as coloured dots (green natural, light green accomplished, yellow competent, orange unconvincing, grey cannot play); hover the pitch for a list. The pitch is drawn from seven small pictures in `data\graphics\pictures\positions`.
+
+**Changed**
+
+- The version label is now 25.1.2.
+
+**25.1.2 adds the Positions pitch to the player profile.** The database files and the update helper are identical to 25.1.1; only `cm0304.exe`, the player profile screen (`data\panels\player profile.xml`) and the seven new pictures change. **Saves made with 25.1.1 load in 25.1.2** (no new game needed). Installer: `CM0304-Modern-25.1.2-Setup.exe`, 39,713,792 bytes, SHA-256 `F17FE1EA3414570E72BB164DBA53DD1CD86912EB6A137CC972ADBEF086F3C063`.
+
 ## 25.1.1
 
 **Fixed**

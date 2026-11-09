@@ -10,7 +10,7 @@ Yes. The installer works with any exe in a CM 03/04 4.1.5 folder, no-CD exes inc
 That works in 25.0.1. The 25.0.0 installer accepted only one specific 4.1.5 executable and refused the official one; this is fixed.
 
 ## How do I upgrade from an earlier version?
-Close the game and run the installer on the same game folder (the same applies to a reinstall). From **25.1.0** to 25.1.1 only `cm0304.exe` and the update helper change; the database is identical, so your **25.1.0 saves keep working**. From **25.0.x** run the installer and then start a **new game**: saves made with 25.0.x or earlier do not load in 25.1.x.
+Close the game and run the installer on the same game folder (the same applies to a reinstall). From **25.1.1** to 25.1.2 `cm0304.exe`, the player profile screen and seven pictures change (from **25.1.0** also the update helper); the database is identical, so your **25.1.0 and 25.1.1 saves keep working**. From **25.0.x** run the installer and then start a **new game**: saves made with 25.0.x or earlier do not load in 25.1.x.
 
 ## In 25.1.0 I got the same prize-money message many times for one match. Is that fixed?
 Yes, in 25.1.1. In 25.1.0 the league-phase prize money of the Champions League, Europa League and Conference League was paid again every time the League Table tab of the live match screen refreshed, so one match could fill the inbox with the same "given $2,500,000" message and pay every club of the night many times over. Since 25.1.1 it is paid once per match, when the match is decided (the amounts are unchanged). Money that a save already received stays in that save; it cannot be repaired. If you stay on 25.1.0 for now, do not open the League Table tab during a live European league-phase match (matches you do not watch, or watch with that tab closed, were always paid correctly).
@@ -20,6 +20,9 @@ Yes, in 25.1.1 for **new games**. In 25.1.0 the Argentine second division (Prime
 
 ## The game crashed on 10 or 11 September in a new game with Italy. Is that fixed?
 25.1.1 fixes the cause for new games. In about 1 in 200 new games with Italy (25.1.0) the Serie C Cup knock-out stage was built one team short and the game crashed when it drew the first round on 10-11 September. A save whose Serie C Cup was already built too short cannot be repaired by the update.
+
+## What are the coloured dots on a player's profile?
+The **Positions** box (new in 25.1.2) shows the spots on the pitch a player can take, as seen from above with your own goal at the bottom. **Green** = natural, **light green** = accomplished (the game picks him there), **yellow** = competent, **orange** = unconvincing, **grey** = cannot play there. Hover over the pitch for a text list. It shows the game's own position ratings of that player; a goalkeeper only has the goalkeeper spot. See [What's new in 25.1.2](index.md).
 
 ## Which version do I need: 25.x or 26.x?
 25.x is the 2025/26 game and keeps receiving bug fixes. A 26.x line (the 2026/27 game) is planned as a separate game: it will need a new game, and saves do not load across the two lines. The update notice only tells you about newer versions of your own line. See [which version do I need](index.md#which-version-do-i-need-two-lines).
@@ -53,7 +56,7 @@ Our modified `cm0304.exe` replaces yours, so other exe mods and cracks are **not
 Saves made with 25.1.0 load in 25.1.1. Saves from 25.0.x and earlier, and from the original game, are not compatible with 25.1.x: start a new game after the update.
 
 ## Is it safe? Can I go back?
-The installer backs up the files it replaces or removes (your exe included) to `backup_pre_v25` in your game folder, verifies the result, and rolls back automatically if something fails. `Uninstall CM 03-04 25.1.1.exe` (or the setup with `/uninstall`) restores your originals, then removes the backup folder and itself. Reinstalling afterwards works. Saves and other files are not touched. To go from 25.1.1 back to 25.1.0 (not to the original game), run the 25.1.0 installer from the [Releases page](https://github.com/cm0304-modern/cm0304-modern/releases) on the same game folder: it puts the 25.1.0 exe and helper back and leaves the data as it is.
+The installer backs up the files it replaces or removes (your exe included) to `backup_pre_v25` in your game folder, verifies the result, and rolls back automatically if something fails. `Uninstall CM 03-04 25.1.2.exe` (or the setup with `/uninstall`) restores your originals, then removes the backup folder and itself. Reinstalling afterwards works. Saves and other files are not touched. To go from 25.1.1 back to 25.1.0 (not to the original game), run the 25.1.0 installer from the [Releases page](https://github.com/cm0304-modern/cm0304-modern/releases) on the same game folder: it puts the 25.1.0 exe and helper back and leaves the data as it is.
 
 ## Why does Windows warn me about the installer?
 The installer is not code-signed, so SmartScreen may show an "unknown publisher" warning. You can compare the file's SHA-256 with the one on the release page.

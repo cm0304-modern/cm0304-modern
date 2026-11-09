@@ -2,7 +2,7 @@
 
 A fan-made, unofficial update that brings Championship Manager 03/04 (version 4.1.5) into the 2025/26 football world.
 
-**Current version: 25.1.1** - [Download from Releases](https://github.com/cm0304-modern/cm0304-modern/releases/latest)
+**Current version: 25.1.2** - [Download from Releases](https://github.com/cm0304-modern/cm0304-modern/releases/latest)
 
 Pages: [FAQ](faq.md) | [Nations](nations.md) | [Known issues](known-issues.md) | [Update notice](update-notice.md) | [Changelog](changelog.md) | [Report a bug](report-a-bug.md) | [Screenshots](screenshots.md)
 
@@ -16,20 +16,22 @@ Pages: [FAQ](faq.md) | [Nations](nations.md) | [Known issues](known-issues.md) |
 
 **Steps**
 
-1. Download `CM0304-Modern-25.1.1-Setup.exe` from the release page. You can check the download with PowerShell: `Get-FileHash .\CM0304-Modern-25.1.1-Setup.exe` and compare with the SHA-256 shown on the release.
+1. Download `CM0304-Modern-25.1.2-Setup.exe` from the release page. You can check the download with PowerShell: `Get-FileHash .\CM0304-Modern-25.1.2-Setup.exe` and compare with the SHA-256 shown on the release.
 2. Run the installer and accept the administrator prompt. If Windows SmartScreen says "unknown publisher", that is because the installer is not code-signed.
 3. Choose the folder that contains `cm0304.exe`. Setup lists what it will change, backs up the originals to `backup_pre_v25`, installs and verifies every file.
-4. Start the game and begin a **new game**. Saves from the original game or from versions before 25.1.0 do not work with this version (saves of 25.1.0 do).
+4. Start the game and begin a **new game**. Saves from the original game or from versions before 25.1.0 do not work with this version (saves of 25.1.0 and 25.1.1 do).
 
 **The installer replaces `cm0304.exe`** with our modified executable (it carries the rule changes). Your own exe is backed up byte for byte. No CD is needed afterwards.
 
-**Upgrading from 25.1.0, or reinstalling:** run the new installer on the same game folder. Only `cm0304.exe` and the update helper `CM0304-UpdateCheck.exe` are replaced; the database files are identical, so your **25.1.0 saves keep working** and no new game is needed (only the Argentine fix needs a new game, see "What's new in 25.1.1"). If you switched the update notice off (`update-check.disabled`), it stays off.
+**Upgrading from 25.1.1, or reinstalling:** run the new installer on the same game folder. `cm0304.exe` and the player profile screen (`data\panels\player profile.xml`) are replaced and seven pictures are added (`data\graphics\pictures\positions`); the database files and everything else stay as they are, so your **25.1.1 saves keep working** and no new game is needed. If your own player profile screen file is not the original one, it is backed up first (the uninstaller puts it back).
+
+**Upgrading from 25.1.0:** the same, and the update helper `CM0304-UpdateCheck.exe` is replaced too; your **25.1.0 saves keep working** and no new game is needed (only the Argentine fix needs a new game, see "What's new in 25.1.1"). If you switched the update notice off (`update-check.disabled`), it stays off.
 
 **Upgrading from 25.0.0-25.0.3:** run the new installer on the same game folder (two new data files are added: `data\db\club_coef.dat` and `data\db\ccs_extra.dat`). **Start a NEW game afterwards: saves made with 25.0.x do not load in 25.1.x** (keep them and use the uninstaller if you want to go back).
 
 If the installer refuses, it has not changed anything. It refuses only when the folder is clearly not a CM 03/04 folder, the game is running or files are not writable.
 
-**Uninstall:** run `Uninstall CM 03-04 25.1.1.exe` from your game folder. It restores your original files (your own exe included) from the backup and then removes the backup folder and itself.
+**Uninstall:** run `Uninstall CM 03-04 25.1.2.exe` from your game folder. It restores your original files (your own exe included) from the backup and then removes the backup folder and itself.
 
 ## Which version do I need? (two lines)
 
@@ -40,6 +42,17 @@ CM 03/04 Modern has two version lines, because the 2025/26 game and the planned 
 
 The update notice only tells you about newer versions of **your own line**: 25.x players hear about 25.x versions, 26.x players about 26.x versions. To keep a 25.x game playable next to 26.x, install 26.x into a copy of your game folder (the installer works on any folder that contains `cm0304.exe`).
 
+## What's new in 25.1.2
+
+**The player profile now shows where a player can play.** A new **Positions** box sits to the left of the Technical (or Goalkeeping) attributes: a top-down pitch with a coloured dot for every spot a player can take (left, centre and right of the striker, attacking midfield, midfield, defensive midfield and defender rows, plus the goalkeeper). It works for every player and shows the same position ratings the game uses for the position labels in the squad list.
+
+- **Green** = natural, **light green** = accomplished (the game picks him there), **yellow** = competent, **orange** = unconvincing, **grey** = cannot play there. A goalkeeper shows only the goalkeeper spot.
+- **Hover over the pitch** for a text list, for example "Natural: AM (L, R), M (L, R). Accomplished: AM (C), M (C)" (AM = attacking midfielder, M = midfielder, DM = defensive midfielder, D = defender, ST = striker, GK = goalkeeper; L, C, R = left, centre, right).
+- **Nothing else changes.** The database is identical to 25.1.1: your **25.1.1 saves keep working** and no new game is needed. The update replaces `cm0304.exe` and the player profile screen file (`data\panels\player profile.xml`) and adds seven small pictures in `data\graphics\pictures\positions`. If you had edited that screen file yourself, the installer backs your version up first and the uninstaller puts it back.
+
+![Mauro Icardi's profile with the Positions pitch](images/12-icardi-profile-positions.jpg)
+
+Mauro Icardi (Galatasaray, a forward): natural at striker (green), accomplished at attacking midfield (light green), unconvincing in midfield (orange), nowhere else.
 ## What's new in 25.1.1
 
 **A bug-fix update of 25.1.0.** Your 25.1.0 saves keep working; no new game is needed (only the Argentine fix needs one, see below).
