@@ -1,6 +1,6 @@
 # Screenshots
 
-Taken in version 25.0.0 (the database is unchanged in 25.0.1) at the start of a new game (13 July 2025). The manager name has been hidden.
+These screenshots were taken in the 2025/26 game (version 25.0.0, the database is unchanged in 25.0.1) at the start of a new game (13 July 2025); they show how the game looks. Screenshots of the 2026/27 game (26.x) will follow. The manager name has been hidden.
 
 ## League table
 

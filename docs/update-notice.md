@@ -8,7 +8,7 @@ When the game starts, it also starts a small helper program, `CM0304-UpdateCheck
 
 ## Which versions it offers
 
-Only versions of your own line: a 25.x game is told about newer 25.x versions, a 26.x game about newer 26.x versions. A version of the other line is never offered and never mentioned, because the two lines are different games (see [which version do I need](index.md#which-version-do-i-need-two-lines)). This rule is part of helper version 1.1.0, which comes with 25.1.1; the helper of 25.0.2 to 25.1.0 simply asked for the project's "latest release", and this project keeps that on the newest 25.x release for as long as 25.x is supported.
+Only versions of your own line: a 25.x game is told about newer 25.x versions, a 26.x game about newer 26.x versions. A version of the other line is never offered and never mentioned, because the two lines are different games (see [which version do I need](index.md#which-version-do-i-need-two-lines)). This rule is part of helper version 1.1.0, which comes with 25.1.1 and with every 26.x release; the helper of 25.0.2 to 25.1.0 simply asked for the project's "latest release", and this project keeps that on the newest 25.x release for as long as 25.x is supported (so the 26.x releases are not marked as the latest release on GitHub: use the links on the [start page](index.md)).
 
 ## Exactly what it does
 
@@ -28,7 +28,7 @@ A small window titled "CM 03/04 Modern update" appears over the game a few secon
 Any one of these is enough:
 
 1. **In the installer:** untick "Check for updates when the game starts".
-2. **Silent install:** add `/noupdatecheck`, for example `CM0304-Modern-25.0.2-Setup.exe /S /noupdatecheck /D=...`.
+2. **Silent install:** add `/noupdatecheck`, for example `CM0304-Modern-26.0.0-Setup.exe /S /noupdatecheck /D=...`.
 3. **Later, with a file:** create an empty file named `update-check.disabled` in the game folder (next to `cm0304.exe`). Delete the file to turn the notice back on.
 4. **With an environment variable:** set `CM0304_NO_UPDATE_CHECK=1` in Windows.
 
@@ -38,8 +38,8 @@ You can also simply delete `CM0304-UpdateCheck.exe`. The game works without it.
 
 The helper is not code-signed, so antivirus software or Windows SmartScreen may warn about it. That is expected for a small unsigned program. If you prefer, switch it off as above or delete it.
 
-## Only with the 25.x game program
+## Only with the 25.x and 26.x game program
 
-The notice only works with the version 25.x `cm0304.exe` that this installer puts in your game folder. The original game program, the official 4.1.5 exe and no-CD exes do not start the helper, so they never show the notice. (After you uninstall, your own exe comes back and the helper is removed.)
+The notice only works with the version 25.x or 26.x `cm0304.exe` that this installer puts in your game folder. The original game program, the official 4.1.5 exe and no-CD exes do not start the helper, so they never show the notice. (After you uninstall, your own exe comes back and the helper is removed.)
 
 Back to the [FAQ](faq.md) or the [start page](index.md).

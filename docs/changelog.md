@@ -1,5 +1,29 @@
 # Changelog
 
+## 26.0.0
+
+**Added**
+
+- **The 2026/27 season.** A new game now starts in July 2026 (Sunday 12 July 2026 when all 30 nations are ticked). Players, ratings, contracts, loans, staff, club reputations, finances, facilities and kit colours are rebuilt from the Football Manager 27 database for 30 nations: the 28 nations of 25.x plus Russia and Israel. The database holds more than 140,000 players and more than 48,000 staff.
+- **Russia and Israel are playable.** Both can be ticked on the new-game screen: Russia with a 16-club Premier League and an 18-club FNL, Israel with a 14-club Premier League and a 16-club Liga Leumit. Israel sends clubs to the European competitions; Russia sends nobody. The other 12 nations that were hidden in 25.x stay hidden (see Known issues).
+- **League structures of 2026/27.** The Turkish second division (TFF 1. Lig) has 20 clubs, the Welsh Cymru Premier 16, the Northern Irish Championship 16, the Russian FNL 18, the Israeli Premier League 14 and Liga Leumit 16. The promotion and relegation of the 2025/26 season are applied: the first divisions of the 30 nations hold their real 2026/27 clubs where the game has them.
+- **Real 2025/26 final tables, European places and coefficients.** First-division clubs start with their real 2025/26 final positions, and the real 2025/26 cup winners are known to the game, so the 2026/27 places in the Champions League, Europa League and Conference League are worked out from the real results. The UEFA association and club coefficients carry the real points up to and including 2025/26, and the UEFA calendar is the real 2026/27 one (for example the Super Cup on 12 August 2026).
+- **History up to 2025/26.** For the 30 nations the winners of the league, the national cup, the league cup and the super cup from 2003/04 to 2025/26 are in the history screens, with the runner-up and, for leagues, the third place wherever it is certain (editions that are disputed or were not held are left out). The European Championship 2004-2024 and the World Cup 2006-2026 winners are there, and the Euro 2028 and World Cup 2030 screens show their hosts (England and the Republic of Ireland; Morocco and Spain: the game shows at most two hosts). The European competition histories reach 2026.
+- **Kit colours from the new data.** Hundreds of clubs that had no kit, or whose old colours did not match the club, now have their real colours (Alanyaspor are orange and green).
+- **Loans.** More than 3,500 players start the game on loan at their loan clubs, as in the data.
+- **Stadiums.** The grounds of 4,283 clubs were changed to the real stadium name and capacity (for example Arsenal at the Emirates Stadium, 60,704; FC Bayern München at the Allianz-Arena, 75,000; Juventus at the Allianz Stadium, 41,507; Ajax at the Johan Cruijff ArenA, 55,500). The old stadium-move entries of the original game that concern the clubs of the 30 nations (moves scheduled for 2026-2028) are switched off in the database.
+
+**Changed**
+
+- **26/27 everywhere.** The game window is titled 'Championship Manager 26/27', the Start Menu header and the Quit hint say 26/27, and the version label is 26.0.0. Competition names follow the new data (for example Süper Lig, Premier League).
+- **Staff attributes are on the game's own 1-20 scale.** The attributes of coaches, scouts, physios and the other staff are converted from the source's larger scale to the 20-point scale the game uses.
+- **Staff dates.** In the database every staff contract ends after the start of the game and nobody keeps the dummy birth year 1900: more than 1,000 staff whose source page gave no age have a plausible one. The game recalculates some staff dates itself when a new game starts, so the dates on the staff screens can still differ.
+- **Midfield labels.** The squad list and the player profile print one midfield label per player (defensive midfield before attacking midfield before midfield), so a weaker 'accomplished' role could hide a natural one. About 11,000 such roles in the database were lowered one step, so that the natural role is the one that is shown; the Positions pitch still draws them as accomplished (light green). About 880 natural wing-backs who had no defender position now count as defenders.
+- **The Positions pitch of the player profile (25.1.2) is included**, with the original attribute-group colours.
+- **The prize-money fix and the calendar fixes of 25.1.1 are included**: European league-phase prize money is paid once per match, the Slovak divisions have the right number of matchdays, the rare Serie C Cup crash is fixed and the Argentine second division completes its season.
+
+**26.0.0 is the 2026/27 game and needs a NEW game.** It has a new database and a new calendar: saves made with 25.x (or earlier) do not belong to it and must not be loaded in it; they stay in your game folder. The game keeps its settings under its own name ('Championship Manager 26/27'), so window and display options start from the defaults and **the game starts in full screen** (Preferences > Display Settings > untick 'Full Screen', or start `cm0304.exe` with `-windowed`). The 12 hidden nations keep rosters from the older Football Manager 26 data, about 14,000 young low-profile players have estimated attributes (the source database holds none until a game starts), and the economy (wages and prize money) is unchanged. The 2025/26 game (25.x) stays available on the Releases page. The update helper is version 1.1.0: a 26.x game is only told about newer 26.x versions. Installer: `CM0304-Modern-26.0.0-Setup.exe`, 39,268,864 bytes, SHA-256 `6D7AF568A329E58A773F9021C067EA3C6C9DE2BE64250EB2105EF6222B9A485F`.
+
 ## 25.1.2
 
 **Added**
