@@ -1,6 +1,6 @@
 # Known issues
 
-This is what we know is not right in 26.0.0. If you find something else, please [report it](report-a-bug.md). Issues of the 25.x line are listed at the end.
+This is what we know is not right in 26.0.1. If you find something else, please [report it](report-a-bug.md). Issues of the 25.x line are listed at the end.
 
 ## Nations
 

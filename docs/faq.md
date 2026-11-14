@@ -22,7 +22,7 @@ Close the game and run the installer on the same game folder (the same applies t
 Yes: install 26.0.0 into a copy of your game folder (the installer works on any folder that contains `cm0304.exe`). The two games keep their settings separately; saves of one line do not load in the other. Do not install both into the same folder: the second installer would replace the first.
 
 ## How do I go back to 25.x?
-Run `Uninstall CM 03-04 26.0.0.exe` from your game folder first (it restores your original files), then run the 25.x installer from the [Releases page](https://github.com/cm0304-modern/cm0304-modern/releases). Your 25.x saves are still in `user data\games`.
+Run `Uninstall CM 03-04 26.0.1.exe` from your game folder first (it restores your original files), then run the 25.x installer from the [Releases page](https://github.com/cm0304-modern/cm0304-modern/releases). Your 25.x saves are still in `user data\games`.
 
 ## Are Russia and Israel in the game?
 Yes, in 26.0.0: Russia (Premier League 16 clubs, FNL 18) and Israel (Premier League 14, Liga Leumit 16) can be ticked on the new-game screen. Israel's clubs play in the European competitions; Russia sends nobody. See [nations](nations.md).
@@ -80,7 +80,7 @@ Our modified `cm0304.exe` replaces yours, so other exe mods and cracks are **not
 Not in 26.0.0: it is the 2026/27 game, so saves made with 25.x or earlier versions, and saves from the original game, do not load in it. Start a new game. Your old saves stay in the folder (`user data\games`); keep them if you plan to go back to 25.x. Inside the 25.x line, saves of 25.1.0 load in 25.1.1 and 25.1.2.
 
 ## Is it safe? Can I go back?
-The installer backs up the files it replaces or removes (your exe included) to `backup_pre_v25` in your game folder, verifies the result, and rolls back automatically if something fails. `Uninstall CM 03-04 26.0.0.exe` (or the setup with `/uninstall`) restores your originals, then removes the backup folder and itself. Reinstalling afterwards works. Saves and other files are not touched. To go from 26.0.0 to 25.x, run the 26.0.0 uninstaller first and then the 25.x installer from the [Releases page](https://github.com/cm0304-modern/cm0304-modern/releases) (see "How do I go back to 25.x?"). Inside the 25.x line, to go from 25.1.1 back to 25.1.0, run the 25.1.0 installer on the same game folder: it puts the 25.1.0 exe and helper back and leaves the data as it is.
+The installer backs up the files it replaces or removes (your exe included) to `backup_pre_v25` in your game folder, verifies the result, and rolls back automatically if something fails. `Uninstall CM 03-04 26.0.1.exe` (or the setup with `/uninstall`) restores your originals, then removes the backup folder and itself. Reinstalling afterwards works. Saves and other files are not touched. To go from 26.0.0 to 25.x, run the 26.0.0 uninstaller first and then the 25.x installer from the [Releases page](https://github.com/cm0304-modern/cm0304-modern/releases) (see "How do I go back to 25.x?"). Inside the 25.x line, to go from 25.1.1 back to 25.1.0, run the 25.1.0 installer on the same game folder: it puts the 25.1.0 exe and helper back and leaves the data as it is.
 
 ## Why does Windows warn me about the installer?
 The installer is not code-signed, so SmartScreen may show an "unknown publisher" warning. You can compare the file's SHA-256 with the one on the release page.

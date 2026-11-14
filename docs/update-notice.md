@@ -28,7 +28,7 @@ A small window titled "CM 03/04 Modern update" appears over the game a few secon
 Any one of these is enough:
 
 1. **In the installer:** untick "Check for updates when the game starts".
-2. **Silent install:** add `/noupdatecheck`, for example `CM0304-Modern-26.0.0-Setup.exe /S /noupdatecheck /D=...`.
+2. **Silent install:** add `/noupdatecheck`, for example `CM0304-Modern-26.0.1-Setup.exe /S /noupdatecheck /D=...`.
 3. **Later, with a file:** create an empty file named `update-check.disabled` in the game folder (next to `cm0304.exe`). Delete the file to turn the notice back on.
 4. **With an environment variable:** set `CM0304_NO_UPDATE_CHECK=1` in Windows.
 

@@ -4,7 +4,7 @@ A fan-made, unofficial update that brings **Championship Manager 03/04** (versio
 
 > **Unofficial.** This project is fan-made. It is not affiliated with, endorsed by, or connected to the original developers or publishers of Championship Manager. See [NOTICE.md](NOTICE.md).
 
-**Current version: 26.0.0** - the 2026/27 game. Download the installer from the [v26.0.0 release](../../releases/tag/v26.0.0). The 2025/26 game stays available as the 25.x line (newest: [25.1.2](../../releases/tag/v25.1.2)); see [which version do I need](docs/index.md#which-version-do-i-need-two-lines).
+**Current version: 26.0.1** - the 2026/27 game. Download the installer from the [v26.0.1 release](../../releases/tag/v26.0.1). The 2025/26 game stays available as the 25.x line (newest: [25.1.2](../../releases/tag/v25.1.2)); see [which version do I need](docs/index.md#which-version-do-i-need-two-lines).
 
 ## What you get
 
@@ -42,31 +42,33 @@ This project does **not** include the game. You need your own copy.
 
 ## Install (3 steps)
 
-1. Download `CM0304-Modern-26.0.0-Setup.exe` from the [v26.0.0 release](../../releases/tag/v26.0.0). (Optional: compare its SHA-256 with the one on the release page.)
+1. Download `CM0304-Modern-26.0.1-Setup.exe` from the [v26.0.1 release](../../releases/tag/v26.0.1). (Optional: compare its SHA-256 with the one on the release page.)
 2. Run it. It asks for administrator rights because the default game folder is under Program Files. Windows may show an "unknown publisher" (SmartScreen) warning, because the installer is not code-signed.
 3. Pick your game folder (the folder that contains `cm0304.exe`; common locations are detected). Setup checks the folder, backs up the original files, installs, and verifies every file.
 
-Then **start a new game**. 26.0.0 is the 2026/27 game: saves made with 25.x or earlier versions, or with the original game, do not load in it (your old saves stay in the folder).
+Then **start a new game** (not needed when you update from 26.0.0: your 26.0.0 saves keep working). 26.x is the 2026/27 game: saves made with 25.x or earlier versions, or with the original game, do not load in it (your old saves stay in the folder).
 
-**The game starts in full screen.** 26.0.0 keeps its settings under its own name, so your options from 25.x or from the original game do not carry over. To play in a window, open Preferences > Display Settings and untick **Full Screen** (or start `cm0304.exe` with the switch `-windowed`).
+**The game starts in full screen.** 26.x keeps its settings under its own name, so your options from 25.x or from the original game do not carry over. To play in a window, open Preferences > Display Settings and untick **Full Screen** (or start `cm0304.exe` with the switch `-windowed`).
 
 **New to this update?** The installer is complete (it contains the full database and every change). You do **not** need 25.x first: install it straight onto your CM 03/04 4.1.5 game.
 
-**Upgrading from 25.x:** run the new installer on the same game folder and **start a new game**. To keep a 25.x game as well, install 26.0.0 into a copy of your game folder. To go back to 25.x, run `Uninstall CM 03-04 26.0.0.exe` from the game folder first, then the 25.x installer.
+**Upgrading from 26.0.0:** run the new installer on the same game folder; your 26.0.0 saves keep working and no new game is needed.
+
+**Upgrading from 25.x:** run the new installer on the same game folder and **start a new game**. To keep a 25.x game as well, install 26.0.1 into a copy of your game folder. To go back to 25.x, run `Uninstall CM 03-04 26.0.1.exe` from the game folder first, then the 25.x installer.
 
 **Which version do I need?** 26.x is the 2026/27 game; 25.x is the 2025/26 game and keeps receiving bug fixes. See [which version do I need](docs/index.md#which-version-do-i-need-two-lines).
 
 Silent install for advanced users:
 
 ```
-CM0304-Modern-26.0.0-Setup.exe /S /D=C:\Program Files (x86)\Eidos\CM 03-04
+CM0304-Modern-26.0.1-Setup.exe /S /D=C:\Program Files (x86)\Eidos\CM 03-04
 ```
 
 Add `/noupdatecheck` to leave the update notice off (see [the update notice](docs/update-notice.md)). (`/D=` must be the last parameter. Exit code 0 means success. The log is `%TEMP%\CM0304-Modern-Setup.log`.)
 
 ## Uninstall
 
-The installer copies the original files to `backup_pre_v25` inside your game folder. To go back, run `Uninstall CM 03-04 26.0.0.exe` from the game folder (or run the setup again with `/uninstall`). It verifies the backup, restores your files from before the update (your own exe included) byte for byte, and then removes the backup folder and the uninstaller itself. Your saves and other files are not touched. If an old backup exists from an earlier install, the installer archives it as `backup_pre_v25_old_<timestamp>` instead of blocking.
+The installer copies the original files to `backup_pre_v25` inside your game folder. To go back, run `Uninstall CM 03-04 26.0.1.exe` from the game folder (or run the setup again with `/uninstall`). It verifies the backup, restores your files from before the update (your own exe included) byte for byte, and then removes the backup folder and the uninstaller itself. Your saves and other files are not touched. If an old backup exists from an earlier install, the installer archives it as `backup_pre_v25_old_<timestamp>` instead of blocking.
 
 ## What the installer changes
 

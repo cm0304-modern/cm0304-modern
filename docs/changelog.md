@@ -1,5 +1,18 @@
 # Changelog
 
+## 26.0.1
+
+**Added**
+
+- **Simulate.** The 'Proceed to match?' window that opens when you click Go To Match has a new button, **Simulate**, to the left of No. It plays that one match with your current squad and tactics, without the match screen, and gives control back at midnight (0:00) after the match day. The **Last Match** page of the simulated match then opens by itself, with the score, the incidents and the fixture, so you see the result at once. Yes and No work as before. If a selected player cannot play (banned or injured), the game shows its usual notice first and that window has no Simulate: replace the player and click Go To Match again.
+- **Three-colour attribute values on the player profile.** The values of the attributes are coloured in three steps: white for 1 to 10, yellow for 11 to 15 and green for 16 to 20. The attribute names stay white. Before, every value was yellow, with a lighter yellow from 15.
+
+**Changed**
+
+- The version label is now 26.0.1.
+
+**26.0.1 adds the Simulate button and the three-colour attribute values.** The database files and the update helper are identical to 26.0.0; only `cm0304.exe` and two screen files change: the player profile screen (`data\panels\player profile.xml`) and the 'Proceed to match?' window (`data\panels\dialog.xml`, new in this update). **Saves made with 26.0.0 load in 26.0.1.** Saves made with 25.x or earlier do not belong to the 2026/27 game: start a NEW game for those. Installer: `CM0304-Modern-26.0.1-Setup.exe`, 39,270,400 bytes, SHA-256 `AF3AE4C8508CB229FC9E22F0DD93ED7CCABA95955918EBF223D8209100F16200`.
+
 ## 26.0.0
 
 **Added**
