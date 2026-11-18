@@ -1,5 +1,40 @@
 # Changelog
 
+## 26.0.2
+
+**Added**
+
+- **Tournament histories.** The history screens now list the winners of the national-team tournaments and of the continental and Inter-Continental club cups, including the 2025 editions (Paris Saint-Germain and Flamengo in the Inter-Continental Cup). The 2025 Africa Cup of Nations is shown with Morocco as winner, as decided by the CAF Appeal Board on 17 March 2026; the ruling of the Court of Arbitration for Sport is still pending, and a later update may follow it.
+- **Player career histories.** The History tab of the players shows their real career: 864,727 season rows for 114,469 players. Clubs that are not loaded in your world show as Unknown Club.
+- **Club and national-team records.** All 148 curated club records now apply, including RB Leipzig (most league appearances and/or goals, as of November 2026), and 175 nations have their most-capped player (as of July 2026); other clubs start without a stored record.
+- **Basque players.** Players with Basque roots (born in the Basque Country or Navarre, or in the current Athletic squads) can again be signed by the clubs with a Basque-only policy, such as Athletic Club.
+- **Proportional Positions pitch.** The pitch of the player profile is drawn in the proportions of the real pitch. 55 pre-rendered sizes (`pitch_r46.png` to `pitch_r100.png`) are installed next to the pitch pictures, and the game takes the one that fits the window.
+
+**Changed**
+
+- Contract end dates of the players are spread over a realistic range of years instead of ending in the same few seasons. The game accepts contract end years up to 2048.
+- The update helper is version 1.2.0: it tells you only about newer releases of your own line (26.x), and it knows the separate 4.x line.
+- The version label is now 26.0.2.
+
+**26.0.2 is a new-game release.** It brings new history, record and contract data in the database and a changed save format (save stream version 148). **Saves made with 26.0.1 still load in 26.0.2, but they do not get the new data**: start a NEW game to see it. Saves made with 25.x or earlier do not belong to the 2026/27 game. The 4.x line (the original database with the exe improvements) is a separate download and is not changed by this release. Not in this release: African competitions. Installer: `CM0304-Modern-26.0.2-Setup.exe`, 45,122,048 bytes, SHA-256 `4624F52B0D4A7F29062354480DC5C7F4D46E8F92E6F4EACA7CAD104CB26BBD7E`.
+
+## 4.2.0
+
+**Added**
+
+- **Simulate.** The 'Proceed to match?' window that opens when you click Go To Match has a new button, **Simulate**, to the left of No. It plays that one match with your current squad and tactics, without the match screen, and gives control back at midnight (0:00) after the match day. The **Last Match** page of the simulated match then opens by itself. Yes and No work as before.
+- **Proportional Positions pitch.** The pitch picture on the Positions page of the player profile now keeps its proportions at every size of the profile window, with the position dots drawn on it.
+- **Faster 2D match engine.** The 'Fast' and 'Very Fast' match speeds are quicker, and the 2D view pace follows the speed setting.
+- **Attribute colours.** On the player profile the attribute values are coloured by level: 1-10 white, 11-15 yellow, 16-20 green (the names stay white).
+- **Substitutes.** 12 players can be named and 5 used in every competition (friendlies: 12 named, 12 used).
+- **Faster game.** A small runtime library next to the game makes the game faster (the installer can skip it with `/noproxy`).
+
+**Changed**
+
+- The version label is now 4.2.0.
+
+**4.2.0 keeps the ORIGINAL 2003/04 database.** This is the line for players who want the game of 2003/04 with quality-of-life fixes only: the clubs, players and competitions are the original ones, no player, club or season data is changed. Saves made with the original game (4.1.5) and with other versions of the 4.x line load. The save format (147) is unchanged: CM Scout and other save tools keep working. The foreign-player limits and the EU flags are not included (the original rules apply). **Saves made with CM 03-04 Modern 26.x do not belong to this line** (and the reverse): use separate game folders, or uninstall one line before installing the other. Installer: `CM0304-4.2.0-Setup.exe`, 4,377,600 bytes, SHA-256 `8D9AF0100C7F3C9373B593394CAAF918B8D440C82B720AE58E775D0C94CFF2BB`.
+
 ## 26.0.1
 
 **Added**
