@@ -1,6 +1,6 @@
 # Known issues
 
-This is what we know is not right in 26.0.2. If you find something else, please [report it](report-a-bug.md). Issues of the 25.x line are listed at the end.
+This is what we know is not right in 26.0.3. If you find something else, please [report it](report-a-bug.md). Issues of the 25.x line are listed at the end.
 
 ## Nations
 
@@ -17,8 +17,8 @@ This is what we know is not right in 26.0.2. If you find something else, please 
 - **Generated squads.** Some clubs have no matching squad in the source data. Those clubs get a generated squad (made-up players) so they can play.
 - **Missing managers.** Some clubs have no manager.
 - **Missing clubs.** A few real clubs could not be placed in a league and are left out of their country's league structure.
-- **Reserve and B teams** cannot be represented by the game's competition structure.
-- **Youth teams are empty.** Squad numbers are not set.
+- **Reserve, B and youth teams.** Reserve, B and youth teams get their players only where the club already has such a team in the game database (1,342 players in 96 clubs); at other clubs these players stay in the first-team squad.
+- **Squad numbers** are not set.
 - **Histories.** The competition histories of the 30 nations are updated to 2025/26 (see the changelog); the histories of other competitions are still the original ones from 2003.
 - **Player accuracy.** We do not claim that every player's details are correct.
 

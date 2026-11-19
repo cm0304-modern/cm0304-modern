@@ -1,5 +1,19 @@
 # Changelog
 
+## 26.0.3
+
+**Added**
+
+- **Reserve and youth squads.** Players are placed into the club's existing secondary team (B, C, II, U21 and so on) when their team name in the Football Manager 27 data ends with that team's type: 1,342 players in 96 clubs (Spain 699, Czech Republic 229, Germany 187, Switzerland 139, Portugal 66, Slovakia 15, Norway 4, New Zealand 3). No team is created; clubs without such a team are unchanged.
+- **Spoken languages.** Players now speak the language of each nation where his club career lasted at least one season (23,213 players, 52,381 entries). The proficiency follows the original data: one season gives Basic, two seasons 8 and three or more seasons 10. The language of the player's own nation comes from the game as before.
+
+**Changed**
+
+- **Join dates.** The date a player joined his club now comes from his career history: the start of his stint at the club, on 1 July of that season (83,370 players). Players whose current club is not in their history join on 1 July 2026 (31,099 players); the 31,909 players without a history are unchanged. The game gives a foreign player the second nationality of his club's country after enough years at the club; with the new dates this follows real spells (for example Dusan Vlahovic, who joined Besiktas this season, no longer gets a Turkish second nationality, while players with a long real spell at a club still do).
+- The version label is now 26.0.3.
+
+**26.0.3 is a new-game release.** It brings new squad, language and join-date data in the database; the save stream version stays 148. **Saves made with 26.0.2 still load in 26.0.3, but they do not get the new data**: start a NEW game to see it. Saves made with 25.x or earlier do not belong to the 2026/27 game. The 4.x line (the original database with the exe improvements) is a separate download and is not changed by this release. Not in this release: African competitions. Installer: `CM0304-Modern-26.0.3-Setup.exe`, 45,274,112 bytes, SHA-256 `E9074D31830CB3A4CC80C1C5FF9936BE19B1DC4C28F99D89DCB6137658B38488`.
+
 ## 26.0.2
 
 **Added**
