@@ -1,5 +1,24 @@
 # Changelog
 
+## 26.0.4
+
+**Added**
+
+- **Real referees.** Referees now come from the Football Manager 27 database: 3,758 real referees in 55 nations. Nations that have no referees in that data keep the officials they had before.
+- **Manager formations and tactics.** 4,862 managers and coaches now have a preferred formation (and about 1,300 of them tactical tendencies such as marking, offside trap and sitting back) from the Football Manager 27 data. In the game it shows on the manager's profile and the AI plays it.
+- **Contributors.** The Contributors list in the community info screen now shows our first supporter.
+- **UEFA Club Coefficients: running season.** The coefficients screen has a new yellow column before Total with the points of the season that is being played. It grows after every European match. The Total and the ranking are unchanged.
+- **Loans.** Loans now come from the Football Manager 27 database, with the real loan club and end date: 5,295 players start the game on loan (3,500+ before), including nations that had none before.
+
+**Changed**
+
+- **Brazil: foreign players.** The Brazilian leagues (Serie A to D) and the Copa do Brasil now follow the current CBF rule: up to 9 foreign players on the match sheet, with no limit on registered foreigners. The game used to allow only 2 foreign players in a match squad and 3 registered. (Libertadores and Sudamericana were already unlimited.)
+- **First-team squads.** The first team of each club is now the usual 25 players (3 goalkeepers, 8 defenders and the best 14 others). Clubs that used to start with 80 or more players, such as Boca Juniors, no longer do.
+- All squad, staff, club and stadium data are now read directly from the Football Manager 27 game database instead of from web pages. It needs a new game.
+- The version label is now 26.0.4.
+
+**26.0.4 is a new-game release.** It brings new data in the database (referees, manager formations and tactics, and the squad, staff, club and stadium data read from the Football Manager 27 database); the save stream version stays 148. **Saves made with 26.0.3 still load in 26.0.4, but they do not get the new data**: start a NEW game to see it. Saves made with 25.x or earlier do not belong to the 2026/27 game. The 4.x line (the original database with the exe improvements) is a separate download and is not changed by this release. Not in this release: African competitions. Installer: `CM0304-Modern-26.0.4-Setup.exe`, 44,934,656 bytes, SHA-256 `0E6DD1968AC6FA76728771A992B45CBAA26B05F10F882A626E4ECAC67E176C0B`.
+
 ## 26.0.3
 
 **Added**
