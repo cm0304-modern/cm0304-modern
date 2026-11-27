@@ -1,6 +1,6 @@
 # Known issues
 
-This is what we know is not right in 26.0.4. If you find something else, please [report it](report-a-bug.md). Issues of the 25.x line are listed at the end.
+This is what we know is not right in 26.0.5. If you find something else, please [report it](report-a-bug.md). Issues of the 25.x line are listed at the end.
 
 ## Nations
 
@@ -16,6 +16,7 @@ This is what we know is not right in 26.0.4. If you find something else, please 
 - **The economy is unchanged.** Wages and prize money follow the same model as in 25.x; they are not the 2026/27 figures.
 - **Generated squads.** Some clubs have no matching squad in the source data. Those clubs get a generated squad (made-up players) so they can play.
 - **Missing managers.** Some clubs have no manager.
+- **National team managers.** 188 national teams have a manager read from the Football Manager 27 database (26.0.5). For 42 of the 230 national teams the game generates the manager: where the database names nobody (for example Mexico, Turkey and Ghana), where it names a manager without any ability data (nine nations) and for historic teams such as the Soviet Union. In a new game the preferred formation of every national team manager shows Unknown, and 33 of the 188 have no attribute values in the database.
 - **Missing clubs.** A few real clubs could not be placed in a league and are left out of their country's league structure.
 - **Reserve, B and youth teams.** Reserve, B and youth teams get their players only where the club already has such a team in the game database (1,342 players in 96 clubs); at other clubs these players stay in the first-team squad.
 - **Squad numbers** are not set.

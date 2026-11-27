@@ -1,5 +1,22 @@
 # Changelog
 
+## 26.0.5
+
+**Fixed**
+
+- **Player career histories.** In 26.0.4 the History tab of most players showed the career of a different player: the history files shipped with 26.0.4 had been built for the player numbering of 26.0.3. They now match the players: 903,879 season rows for 120,741 players, and 6,272 more players have a history than before.
+
+**Added**
+
+- **National team managers from the Football Manager 27 database.** 188 national teams now have a manager read from the Football Manager 27 database (179 in 26.0.4). Compared with 26.0.4 the database names a different manager for 82 teams (for example France: Zidane, Germany: Klopp, Italy: Mancini, Portugal: Jorge Jesus, Holland: Xavi, Belgium: van Bommel, Scotland: Pocognoli, Croatia: Bilic), a manager for 28 teams that had none (for example the Netherlands Antilles: Advocaat) and nobody for 16 teams: among them Mexico, Turkey and Ghana, where the game generates a manager when a new game starts, because the database has none. For nine of the managers it names, the database holds no ability data (see Known); six of those nine are among the 82 and 28 teams above, so the game generates the manager there. In a new game 84 teams keep their 26.0.4 manager, 78 get a different one and 26 get one where there was none (188 in all); Ethiopia, Chinese Taipei, Guyana and Vanuatu lose the real manager they had in 26.0.4.
+- **Contributors.** The Contributors list in the community info screen now shows a second supporter.
+
+**Changed**
+
+- The version label is now 26.0.5. Besides the people and server database (national team managers), the three player-history files and the community info screen, nothing differs from 26.0.4: the other database files, the other screens and the game programme are those of 26.0.4.
+
+**26.0.5 corrects the player histories of 26.0.4 and brings the national team managers of the Football Manager 27 database.** Saves made with 26.0.4 get the corrected careers in place (tested on a game-start save); saves from 26.0.3 or older show wrong careers with the corrected history files (a 26.0.3 save still showed the right careers in 26.0.4): start a new game, or keep 26.0.4 until you have finished such a save. The new national team managers and the other data changes appear only in a NEW game; starting a new game is recommended, not required. An existing 26.0.4 save keeps its old national team managers. Saves made with 25.x or earlier do not belong to the 2026/27 game. Not in this release: African competitions. Installer: `CM0304-Modern-26.0.5-Setup.exe`, 45,210,624 bytes, SHA-256 `63023F9CA4ADE4A6BE1FAEEFA35E4C10CC39C2223E680AB2BD4D1CAC5A82159E`.
+
 ## 26.0.4
 
 **Added**

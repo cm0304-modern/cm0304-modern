@@ -4,16 +4,16 @@ A fan-made, unofficial update that brings **Championship Manager 03/04** (versio
 
 > **Unofficial.** This project is fan-made. It is not affiliated with, endorsed by, or connected to the original developers or publishers of Championship Manager. See [NOTICE.md](NOTICE.md).
 
-**Current version: 26.0.4** - the 2026/27 game. Download the installer from the [v26.0.4 release](../../releases/tag/v26.0.4). The 2025/26 game stays available as the 25.x line (newest: [25.1.2](../../releases/tag/v25.1.2)); see [which version do I need](docs/index.md#which-version-do-i-need-version-lines).
+**Current version: 26.0.5** - the 2026/27 game. Download the installer from the [v26.0.5 release](../../releases/tag/v26.0.5). The 2025/26 game stays available as the 25.x line (newest: [25.1.2](../../releases/tag/v25.1.2)); see [which version do I need](docs/index.md#which-version-do-i-need-version-lines).
 
 ## Two downloads: pick one line
 
 | | **Modern 26.x** (current) | **Era 4.x** |
 |---|---|---|
 | Game | The **2026/27** football world (Football Manager 27 data, 30 nations) | The **original 2003/04** database, unchanged |
-| Installer | `CM0304-Modern-<version>-Setup.exe`, [v26.0.4 release](../../releases/tag/v26.0.4) | `CM0304-<version>-Setup.exe`, [v4.2.0 release](../../releases/tag/v4.2.0) |
+| Installer | `CM0304-Modern-<version>-Setup.exe`, [v26.0.5 release](../../releases/tag/v26.0.5) | `CM0304-<version>-Setup.exe`, [v4.2.0 release](../../releases/tag/v4.2.0) |
 | Adds | Modern UEFA formats, new database, all exe improvements | Simulate button, proportional Positions pitch, attribute colours, faster 2D match engine, speed-up runtime |
-| Saves | Needs a **new game**; 26.0.4 is a new-game release | Saves of the original game load; the save format is unchanged |
+| Saves | Saves of 26.0.4 get the corrected player careers in place (tested on a game-start save) but keep their old national team managers; saves of 26.0.3 or older and of 25.x need a **new game** | Saves of the original game load; the save format is unchanged |
 
 The two lines are separate: each installer refuses a folder that has the other line installed (uninstall first). The GitHub "Latest release" is always the newest Modern release; the 4.x era releases are not marked Latest, so use the version links above. Modern installers older than 26.0.2 have **no** such guard and would overwrite a 4.x folder: use the installer of the line you have installed.
 
@@ -53,11 +53,11 @@ This project does **not** include the game. You need your own copy.
 
 ## Install (3 steps)
 
-1. Download `CM0304-Modern-26.0.4-Setup.exe` from the [v26.0.4 release](../../releases/tag/v26.0.4). (Optional: compare its SHA-256 with the one on the release page.)
+1. Download `CM0304-Modern-26.0.5-Setup.exe` from the [v26.0.5 release](../../releases/tag/v26.0.5). (Optional: compare its SHA-256 with the one on the release page.)
 2. Run it. It asks for administrator rights because the default game folder is under Program Files. Windows may show an "unknown publisher" (SmartScreen) warning, because the installer is not code-signed.
 3. Pick your game folder (the folder that contains `cm0304.exe`; common locations are detected). Setup checks the folder, backs up the original files, installs, and verifies every file.
 
-Then **start a new game**: 26.0.4 is a new-game release (saves of 26.0.3 still load but do not get the new data). 26.x is the 2026/27 game: saves made with 25.x or earlier versions, or with the original game, do not load in it (your old saves stay in the folder).
+Then **start a new game** (the new national team managers and the other data changes of 26.0.5 appear only in a new game; if you upgrade from 26.0.4, see below). 26.x is the 2026/27 game: saves made with 25.x or earlier versions, or with the original game, do not load in it (your old saves stay in the folder).
 
 **The game starts in full screen.** 26.x keeps its settings under its own name, so your options from 25.x or from the original game do not carry over. To play in a window, open Preferences > Display Settings and untick **Full Screen** (or start `cm0304.exe` with the switch `-windowed`).
 
@@ -65,27 +65,31 @@ Then **start a new game**: 26.0.4 is a new-game release (saves of 26.0.3 still l
 
 **Upgrading from 26.0.0, 26.0.1 or 26.0.2:** run the new installer on the same game folder, then start a **new game** for the new data.
 
-**Upgrading from 25.x:** run the new installer on the same game folder and **start a new game**. To keep a 25.x game as well, install 26.0.4 into a copy of your game folder. To go back to 25.x, run `Uninstall CM 03-04 26.0.4.exe` from the game folder first, then the 25.x installer.
+**Upgrading from 26.0.3:** run the new installer on the same game folder, then start a **new game** (a save of 26.0.3 does not get the new data of 26.0.4 and 26.0.5, and it shows wrong player careers with the corrected history files).
+
+**Upgrading from 26.0.4:** run the new installer on the same game folder; it replaces `cm0304.exe`, the people and server database, the three player-history files and the community info screen. Saves made with 26.0.4 get the corrected player careers in place (tested on a game-start save); an existing 26.0.4 save keeps its old national team managers. The new national team managers and the other data changes appear only in a **new game**; starting one is recommended, not required.
+
+**Upgrading from 25.x:** run the new installer on the same game folder and **start a new game**. To keep a 25.x game as well, install 26.0.5 into a copy of your game folder. To go back to 25.x, run `Uninstall CM 03-04 26.0.5.exe` from the game folder first, then the 25.x installer.
 
 **Which version do I need?** 26.x is the 2026/27 game; 25.x is the 2025/26 game (discontinued). See [which version do I need](docs/index.md#which-version-do-i-need-version-lines).
 
 Silent install for advanced users:
 
 ```
-CM0304-Modern-26.0.4-Setup.exe /S /D=C:\Program Files (x86)\Eidos\CM 03-04
+CM0304-Modern-26.0.5-Setup.exe /S /D=C:\Program Files (x86)\Eidos\CM 03-04
 ```
 
 Add `/noupdatecheck` to leave the update notice off (see [the update notice](docs/update-notice.md)). (`/D=` must be the last parameter. Exit code 0 means success. The log is `%TEMP%\CM0304-Modern-Setup.log`.)
 
 ## Uninstall
 
-The installer copies the original files to `backup_pre_v25` inside your game folder. To go back, run `Uninstall CM 03-04 26.0.4.exe` from the game folder (or run the setup again with `/uninstall`). It verifies the backup, restores your files from before the update (your own exe included) byte for byte, and then removes the backup folder and the uninstaller itself. Your saves and other files are not touched. If an old backup exists from an earlier install, the installer archives it as `backup_pre_v25_old_<timestamp>` instead of blocking.
+The installer copies the original files to `backup_pre_v25` inside your game folder. To go back, run `Uninstall CM 03-04 26.0.5.exe` from the game folder (or run the setup again with `/uninstall`). It verifies the backup, restores your files from before the update (your own exe included) byte for byte, and then removes the backup folder and the uninstaller itself. Your saves and other files are not touched. If an old backup exists from an earlier install, the installer archives it as `backup_pre_v25_old_<timestamp>` instead of blocking.
 
 ## What the installer changes
 
-It **replaces `cm0304.exe`** with our modified executable (it carries the rule changes: substitutes, foreign-player limits, hidden nations, match speeds, the UEFA formats, year fixes and the 26/27 texts; no CD is needed afterwards). Your own exe is backed up byte for byte. The installer changes **42 entries**, nothing else: `cm0304.exe`, the 4 database files and 3 player-history files in `data\db`, two UEFA data files (`club_coef.dat` and `ccs_extra.dat`), three competition pictures, seven small pictures for the Positions pitch, five menu/community/profile XML files, the update helper `CM0304-UpdateCheck.exe`, the three speed-up files (`msvcr71.dll`, `MSVCR71_real.dll` and `cm_proxy.cfg`), and 13 old competition fixture files in `data\comps` (Belgium, France, Italy) that are removed (they go into the backup). Other exe-level mods are not kept while the update is installed.
+It **replaces `cm0304.exe`** with our modified executable (it carries the rule changes: substitutes, foreign-player limits, hidden nations, match speeds, the UEFA formats, year fixes and the 26/27 texts; no CD is needed afterwards). Your own exe is backed up byte for byte. The installer changes **98 entries**, nothing else: `cm0304.exe`, the 4 database files and 3 player-history files in `data\db`, two UEFA data files (`club_coef.dat` and `ccs_extra.dat`), three competition pictures, seven small pictures for the Positions pitch and 55 more for its proportional ladder, six menu/community/profile/dialog XML files, the update helper `CM0304-UpdateCheck.exe`, the three speed-up files (`msvcr71.dll`, `MSVCR71_real.dll` and `cm_proxy.cfg`), and 13 old competition fixture files in `data\comps` (Belgium, France, Italy) that are removed (they go into the backup). Other exe-level mods are not kept while the update is installed.
 
-The update helper (version 1.1.0) is added to the game folder; the uninstaller removes it and its small settings folder. The exe starts the helper at game start; it only looks for newer versions of your own version line (26.x players are told about 26.x versions). The helper is an unsigned program, so antivirus or SmartScreen may warn; it can be deleted or switched off and the game works without it. See [the update notice](docs/update-notice.md).
+The update helper (version 1.2.0) is added to the game folder; the uninstaller removes it and its small settings folder. The exe starts the helper at game start; it only looks for newer versions of your own version line (26.x players are told about 26.x versions). The helper is an unsigned program, so antivirus or SmartScreen may warn; it can be deleted or switched off and the game works without it. See [the update notice](docs/update-notice.md).
 
 The installer refuses, changing nothing, only when the folder is clearly not a CM 03/04 folder, the game is running or files are not writable. An unusual exe length or database header only gives a warning.
 
